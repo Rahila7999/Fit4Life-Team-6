@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rubik&display=swap" rel="stylesheet"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        .tabs button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+        .tabs button.active {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .instructions {
+            margin-top: 10px;
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+        <h2 class="text-center mb-4" id="video-title">Video Title</h2>
+       
+        <div id="animation" class="tab-content">
+            <video id="animation-video" autoplay muted controls loop>
+                Your browser does not support the video.
+            </video>
+        </div>
+        <div id="muscles" class="tab-content">
+            <video id="muscles-video" autoplay muted controls loop>
+                Your browser does not support the video.
+            </video>
+        </div>
+        <div id="how-to-do" class="tab-content">
+            <video id="how-to-do-video" autoplay muted controls loop>
+                Your browser does not support the video.
+            </video>
+        </div>
+        <div class="instructions">
+            <p id="instructions">Here are the instructions for the workout...</p>
+        </div>
+        <div class="tabs">
+            <button class="tab-btn" data-target="#animation">Animation</button>
+            <button class="tab-btn" data-target="#muscles">Muscles</button>
+            <button class="tab-btn" data-target="#how-to-do">How to Do</button>
+        </div>
+    </div>
+    <script>
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const videoTitle = getQueryParam('title');
+            const animationSrc = getQueryParam('animation');
+            const musclesSrc = getQueryParam('muscles');
+            const howToDoSrc = getQueryParam('howToDo');
+            const videoInstructions = getQueryParam('instructions');
+
+            document.getElementById('video-title').textContent = videoTitle;
+            document.getElementById('animation-video').src = animationSrc;
+            document.getElementById('muscles-video').src = musclesSrc;
+            document.getElementById('how-to-do-video').src = howToDoSrc;
+            document.getElementById('instructions').textContent = videoInstructions;
+
+            // Activate the first tab by default
+            document.querySelector('.tab-btn').classList.add('active');
+            document.querySelector('.tab-content').classList.add('active');
+            
+            document.querySelectorAll('.tab-btn').forEach(button => {
+                button.addEventListener('click', () => {
+                    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+                    document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+                    button.classList.add('active');
+                    document.querySelector(button.getAttribute('data-target')).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -52,13 +52,46 @@
         .video-section .video-container {
             display: inline-block;
             width: 300px;
-            margin-right: 10px;
+            margin-right: 50px;
+            position: relative;
         }
         .video-container video {
             width: 100%;
-           
         }
-       
+        .video-container .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+            cursor: pointer;
+        }
+        
+
+.read-more {
+    position: absolute;
+    bottom: 10px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.read-more button {
+    background-color:  #ff7300;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
     </style>
 </head>
 <body>
@@ -134,203 +167,314 @@
             <button id="advanced-btn">Advanced</button>
         </div>
 
-        <!-- Beginner Workout Section Start -->
-        <div id="beginner-workout" class="workout-container active">
-            <h3 class="text-center mb-4">Beginner</h3>
-            <div class="video-section">
-                <h4>Abs Beginner (20min . 16 workouts)</h4>
-                <div class="video-container">
-                    <video autoplay muted controls loop>
-                        <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                        Your browser does not support the video.
-                    </video>
-                    
+       <!-- Beginner Workout Section Start -->
+       <div id="beginner-workout" class="workout-container active">
+        <h3 class="text-center mb-4">Beginner</h3>
+        <div class="video-section">
+            <h4>Abs Beginner (20min . 16 workouts)</h4>
+            <div class="video-container">
+                <video autoplay muted loop>
+                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay">Play Video</div>
+                <div class="read-more">
+                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
                 </div>
-                <div class="video-container">
-                        <video autoplay muted controls loop>
-                            <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665806/Abs%20Beginner/abdominalcrunches.mp4" type="video/mp4">
-                            Your browser does not support the video.
-                        </video>
-                        
-                </div>
-                <div class="video-container">
-                    <video autoplay muted controls loop>
-                        <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665809/Abs%20Beginner/russiantwist.mp4" type="video/mp4">
-                        Your browser does not support the video.
-                    </video>
-                </div>
-                <div class="video-container">
-                    <video autoplay muted controls loop>
-                        <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665815/Abs%20Beginner/mountainclimber.mp4" type="video/mp4">
-                        Your browser does not support the video.
-                    </video>
-                </div>
-                <div class="video-container">
-                    <video autoplay muted controls loop>
-                        <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665803/Abs%20Beginner/heeltouch.mp4" type="video/mp4">
-                        Your browser does not support the video.
-                    </video>
-                </div>
-                <div class="video-container">
-                    <video autoplay muted controls loop>
-                        <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665804/Abs%20Beginner/legraises.mp4" type="video/mp4">
-                        Your browser does not support the video.
-                    </video>
-                </div>
-                <div class="video-container">
-                    <video autoplay muted controls loop>
-                        <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665806/Abs%20Beginner/plank.mp4" type="video/mp4">
-                        Your browser does not support the video.
-                    </video>
-                </div>
-                <div class="video-container">
+            </div>
+            <div class="video-container">
                     <video autoplay muted controls loop>
                         <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665806/Abs%20Beginner/abdominalcrunches.mp4" type="video/mp4">
                         Your browser does not support the video.
                     </video>
-                </div>
-                <div class="video-container">
-                    <video autoplay muted controls loop>
-                        <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665809/Abs%20Beginner/russiantwist.mp4" type="video/mp4">
-                        Your browser does not support the video.
-                    </video>
-                </div>
-                <div class="video-container">
-                    <video autoplay muted controls loop>
-                        <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665815/Abs%20Beginner/mountainclimber.mp4" type="video/mp4">
-                        Your browser does not support the video.
-                    </video>
-                </div>
-                <div class="video-container">
-                    <video autoplay muted controls loop>
-                        <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665803/Abs%20Beginner/heeltouch.mp4" type="video/mp4">
-                        Your browser does not support the video.
-                    </video>
-                </div>
-                <div class="video-container">
-                    <video autoplay muted controls loop>
-                        <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665804/Abs%20Beginner/legraises.mp4" type="video/mp4">
-                        Your browser does not support the video.
-                    </video>
-                </div>
-                <div class="video-container">
-                    <video autoplay muted controls loop>
-                        <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665806/Abs%20Beginner/plank.mp4" type="video/mp4">
-                        Your browser does not support the video.
-                    </video>
-                </div>
-                <div class="video-container">
-                    <video autoplay muted controls loop>
-                        <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665803/Abs%20Beginner/cobrastretch.mp4" type="video/mp4">
-                        Your browser does not support the video.
-                    </video>
-                </div>
-                <div class="video-container">
-                    <video autoplay muted controls loop>
-                        <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665809/Abs%20Beginner/stretchleft.mp4" type="video/mp4">
-                        Your browser does not support the video.
-                    </video>
-                </div>
-                <div class="video-container">
-                    <video autoplay muted controls loop>
-                        <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665811/Abs%20Beginner/stretchright.mp4" type="video/mp4">
-                        Your browser does not support the video.
-                    </video>
-                </div>
+                    <div class="video-overlay">Play Video</div>
+                    
             </div>
-            <div class="video-section">
-                <h4>Chest Beginner</h4>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_ABS_1" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_ABS_2" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_ABS_3" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_ABS_4" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_ABS_5" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_ABS_6" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_ABS_7" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_ABS_8" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_ABS_9" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_ABS_10" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_ABS_11" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_ABS_12" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_ABS_13" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_ABS_14" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_ABS_15" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_ABS_16" frameborder="0" allowfullscreen></iframe>
-                </div>
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665809/Abs%20Beginner/russiantwist.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
             </div>
-            <!-- Repeat for other workout categories: Chest, Arm, Leg, Shoulder & Back -->
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665815/Abs%20Beginner/mountainclimber.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665803/Abs%20Beginner/heeltouch.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665804/Abs%20Beginner/legraises.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665806/Abs%20Beginner/plank.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665806/Abs%20Beginner/abdominalcrunches.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665809/Abs%20Beginner/russiantwist.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665815/Abs%20Beginner/mountainclimber.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665803/Abs%20Beginner/heeltouch.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665804/Abs%20Beginner/legraises.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665806/Abs%20Beginner/plank.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665803/Abs%20Beginner/cobrastretch.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665809/Abs%20Beginner/stretchleft.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665811/Abs%20Beginner/stretchright.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
         </div>
-        <!-- Beginner Workout Section End -->
+        <div class="video-section">
+            <h4>Chest Beginner</h4>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_ABS_1" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_ABS_2" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_ABS_3" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_ABS_4" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_ABS_5" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_ABS_6" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_ABS_7" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_ABS_8" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_ABS_9" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_ABS_10" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_ABS_11" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_ABS_12" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_ABS_13" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_ABS_14" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_ABS_15" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_ABS_16" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <!-- Repeat for other workout categories: Chest, Arm, Leg, Shoulder & Back -->
+    </div>
+    <!-- Beginner Workout Section End -->
 
         <!-- Intermediate Workout Section Start -->
         <div id="intermediate-workout" class="workout-container">
             <h3 class="text-center mb-4">Intermediate</h3>
-            <!-- Similar structure for Intermediate workouts -->
             <div class="video-section">
-                <h4>Abs Intermediate</h4>
+                <h4>Abs Intermediate (25min . 16 workouts)</h4>
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_INTERMEDIATE_ABS_1" frameborder="0" allowfullscreen></iframe>
+                    <video autoplay muted loop>
+                        <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665769/Abs%20Intermediate/jumpingjacks.mp4" type="video/mp4">
+                        Your browser does not support the video.
+                    </video>
+                    <div class="video-overlay">Play Video</div>
                 </div>
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_INTERMEDIATE_ABS_2" frameborder="0" allowfullscreen></iframe>
+                    <video autoplay muted loop>
+                        <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665769/Abs%20Intermediate/abdominalcrunches.mp4" type="video/mp4">
+                        Your browser does not support the video.
+                    </video>
+                    <div class="video-overlay">Play Video</div>
                 </div>
-                <!-- Add more video containers as needed -->
+                <div class="video-container">
+                    <video autoplay muted loop>
+                        <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665768/Abs%20Intermediate/russiantwist.mp4" type="video/mp4">
+                        Your browser does not support the video.
+                    </video>
+                    <div class="video-overlay">Play Video</div>
+                </div>
+                <div class="video-container">
+                    <video autoplay muted loop>
+                        <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665768/Abs%20Intermediate/mountainclimber.mp4" type="video/mp4">
+                        Your browser does not support the video.
+                    </video>
+                    <div class="video-overlay">Play Video</div>
+                </div>
+                <div class="video-container">
+                    <video autoplay muted loop>
+                        <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665768/Abs%20Intermediate/heeltouch.mp4" type="video/mp4">
+                        Your browser does not support the video.
+                    </video>
+                    <div class="video-overlay">Play Video</div>
+                </div>
+                <div class="video-container">
+                    <video autoplay muted loop>
+                        <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665768/Abs%20Intermediate/legraises.mp4" type="video/mp4">
+                        Your browser does not support the video.
+                    </video>
+                    <div class="video-overlay">Play Video</div>
+                </div>
+                <div class="video-container">
+                    <video autoplay muted loop>
+                        <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665768/Abs%20Intermediate/plank.mp4" type="video/mp4">
+                        Your browser does not support the video.
+                    </video>
+                    <div class="video-overlay">Play Video</div>
+                </div>
+                <div class="video-container">
+                    <video autoplay muted loop>
+                        <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665769/Abs%20Intermediate/cobra.mp4" type="video/mp4">
+                        Your browser does not support the video.
+                    </video>
+                    <div class="video-overlay">Play Video</div>
+                </div>
             </div>
-            <!-- Repeat for other workout categories: Chest, Arm, Leg, Shoulder & Back -->
         </div>
         <!-- Intermediate Workout Section End -->
 
         <!-- Advanced Workout Section Start -->
         <div id="advanced-workout" class="workout-container">
             <h3 class="text-center mb-4">Advanced</h3>
-            <!-- Similar structure for Advanced workouts -->
             <div class="video-section">
-                <h4>Abs Advanced</h4>
+                <h4>Abs Advanced (30min . 16 workouts)</h4>
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_ADVANCED_ABS_1" frameborder="0" allowfullscreen></iframe>
+                    <video autoplay muted loop>
+                        <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665763/Abs%20Advanced/jumpingjacks.mp4" type="video/mp4">
+                        Your browser does not support the video.
+                    </video>
+                    <div class="video-overlay">Play Video</div>
                 </div>
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_ADVANCED_ABS_2" frameborder="0" allowfullscreen></iframe>
+                    <video autoplay muted loop>
+                        <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665763/Abs%20Advanced/abdominalcrunches.mp4" type="video/mp4">
+                        Your browser does not support the video.
+                    </video>
+                    <div class="video-overlay">Play Video</div>
                 </div>
-                <!-- Add more video containers as needed -->
+                <div class="video-container">
+                    <video autoplay muted loop>
+                        <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665763/Abs%20Advanced/russiantwist.mp4" type="video/mp4">
+                        Your browser does not support the video.
+                    </video>
+                    <div class="video-overlay">Play Video</div>
+                </div>
+                <div class="video-container">
+                    <video autoplay muted loop>
+                        <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665763/Abs%20Advanced/mountainclimber.mp4" type="video/mp4">
+                        Your browser does not support the video.
+                    </video>
+                    <div class="video-overlay">Play Video</div>
+                </div>
+                <div class="video-container">
+                    <video autoplay muted loop>
+                        <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665763/Abs%20Advanced/heeltouch.mp4" type="video/mp4">
+                        Your browser does not support the video.
+                    </video>
+                    <div class="video-overlay">Play Video</div>
+                </div>
+                <div class="video-container">
+                    <video autoplay muted loop>
+                        <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665763/Abs%20Advanced/legraises.mp4" type="video/mp4">
+                        Your browser does not support the video.
+                    </video>
+                    <div class="video-overlay">Play Video</div>
+                </div>
+                <div class="video-container">
+                    <video autoplay muted loop>
+                        <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665763/Abs%20Advanced/plank.mp4" type="video/mp4">
+                        Your browser does not support the video.
+                    </video>
+                    <div class="video-overlay">Play Video</div>
+                </div>
+                <div class="video-container">
+                    <video autoplay muted loop>
+                        <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665763/Abs%20Advanced/cobra.mp4" type="video/mp4">
+                        Your browser does not support the video.
+                    </video>
+                    <div class="video-overlay">Play Video</div>
+                </div>
             </div>
-            <!-- Repeat for other workout categories: Chest, Arm, Leg, Shoulder & Back -->
         </div>
         <!-- Advanced Workout Section End -->
     </div>
     <!-- Main Content End -->
-
     <!-- Footer Start -->
     <div class="container-fluid py-4 py-lg-0 px-5" style="background: #111111;">
         <div class="row gx-5">
@@ -375,6 +519,12 @@
             document.getElementById(level + '-btn').classList.add('active');
             document.getElementById(level + '-workout').classList.add('active');
         }
+        
+        function readMore(title, animationSrc, musclesSrc, howToDoSrc, instructions) {
+            const url = `video.html?title=${encodeURIComponent(title)}&animation=${encodeURIComponent(animationSrc)}&muscles=${encodeURIComponent(musclesSrc)}&howToDo=${encodeURIComponent(howToDoSrc)}&instructions=${encodeURIComponent(instructions)}`;
+            window.location.href = url;
+        }
+
     </script>
 </body>
 </html>
