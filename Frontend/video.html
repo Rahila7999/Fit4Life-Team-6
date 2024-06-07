@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Details</title>
+    <!-- External CSS links -->
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rubik&display=swap" rel="stylesheet"> 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -11,10 +12,19 @@
     <link href="css/style.css" rel="stylesheet">
     <style>
         .tab-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px; /* Adjust height as needed */
+            text-align: center;
             display: none;
         }
         .tab-content.active {
             display: block;
+        }
+        .tab-content video {
+            max-width: 100%;
+            max-height: 100%;
         }
         .tabs {
             display: flex;
@@ -29,7 +39,7 @@
             margin-right: 5px;
         }
         .tabs button.active {
-            background-color: #007bff;
+            background-color: #ff7300;
             color: #fff;
         }
         .instructions {
@@ -59,15 +69,18 @@
                 Your browser does not support the video.
             </video>
         </div>
-        <div class="instructions">
-            <p id="instructions">Here are the instructions for the workout...</p>
-        </div>
+        
         <div class="tabs">
             <button class="tab-btn" data-target="#animation">Animation</button>
             <button class="tab-btn" data-target="#muscles">Muscles</button>
             <button class="tab-btn" data-target="#how-to-do">How to Do</button>
         </div>
+        
+        <div class="instructions">
+            <p id="instructions">Here are the instructions for the workout...</p>
+        </div>
     </div>
+    
     <script>
         function getQueryParam(param) {
             const urlParams = new URLSearchParams(window.location.search);
