@@ -171,4 +171,33 @@
     position: relative;
     bottom: 0;
     width: 100%;
+}.instructions {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background color */
 }
+
+.instructions-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 20px; /* Space between columns */
+}
+
+.column {
+    background-color: #fff; /* White background for columns */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.column h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2em; /* Slightly larger font size for headings */
+}
+
+.column p {
+    margin-top: 0;
+    line-height: 1.6; /* Improve readability */
+    color: #333; /* Dark text color for better contrast */
+}
+
