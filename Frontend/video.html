@@ -3,59 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Details</title>
-    <!-- External CSS links -->
+    <title>Video</title>
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rubik&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <style>
-          #how-to-do-video {
-            width: 100%;   
-            height: 400px; 
-         }
-        .tab-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 400px;
-            text-align: center;
-            display: none;
-        }
-        .tab-content.active {
-            display: block;
-        }
-        .tab-content video, .tab-content iframe {
-            max-width: 100%;
-            max-height: 100%;
-        }
-        .tabs {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 1rem;
-        }
-        .tabs button {
-            padding: 10px 20px;
-            border: none;
-            background-color: #f0f0f0;
-            cursor: pointer;
-            margin-right: 5px;
-        }
-        .tabs button.active {
-            background-color: #ff7300;
-            color: #fff;
-        }
-        .instructions {
-            margin-top: 10px;
-            background-color: #f8f9fa;
-            padding: 10px;
-            border-radius: 5px;
-        }
-    </style>
+    <link href="css/workout.css" rel="stylesheet">
+
 </head>
 <body>
-<<<<<<< HEAD
     <!-- Header Start -->
     <div class="container-fluid bg-dark px-0">
         <div class="row gx-0">
@@ -88,27 +56,32 @@
             </div>
         </div>
     </div>
-    
     <!-- Header End -->
-=======
->>>>>>> cc524da77d71b5cd91b346108c0b67277cd34527
-    <div class="container my-5">
+<!-- Main content wrapper -->
+<div class="container-fluid d-flex">
+    <div class="sidebar">
+        <h3>Workout Videos</h3>
+        <ul id="video-list">
+            <!-- List of workout videos will be added here dynamically -->
+        </ul>
+    </div>
+    <div class="main-content">
         <h2 class="text-center mb-4" id="video-title">Video Title</h2>
-       
+
         <div id="animation" class="tab-content">
             <video id="animation-video" autoplay muted controls loop>
-                Your browser does not support the video.
+                Your browser does not support the video tag.
             </video>
         </div>
         <div id="muscles" class="tab-content">
             <video id="muscles-video" autoplay muted controls loop>
-                Your browser does not support the video.
+                Your browser does not support the video tag.
             </video>
         </div>
         <div id="how-to-do" class="tab-content">
             <iframe id="how-to-do-video" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-        
+
         <div class="tabs">
             <button class="tab-btn" data-target="#animation">Animation</button>
             <button class="tab-btn" data-target="#muscles">Muscles</button>
@@ -119,121 +92,95 @@
             <p id="instructions">Here are the instructions for the workout...</p>
         </div>
     </div>
-<<<<<<< HEAD
-      <!-- Footer Start -->
-   <div class="container-fluid bg-dark text-secondary px-5 mt-5">
-    <div class="row gx-5">
-        <div class="col-lg-8 col-md-6">
-            <div class="row gx-5">
-                <div class="col-lg-4 col-md-12 pt-5 mb-5">
-                    <h4 class="text-uppercase text-light mb-4">Get In Touch</h4>
-                    <div class="d-flex mb-2">
-                        <i class="bi bi-geo-alt text-primary me-2"></i>
-                        <p class="mb-0">NSTI(w) Noida UP</p>
+</div>
+
+    <!-- Footer Start -->
+    <div class="videofooter">
+        <div class="container-fluid bg-dark text-secondary px-5 mt-5">
+        <div class="row gx-5">
+            <div class="col-lg-8 col-md-6">
+                <div class="row gx-5">
+                    <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                        <h4 class="text-uppercase text-light mb-4">Get In Touch</h4>
+                        <div class="d-flex mb-2">
+                            <i class="bi bi-geo-alt text-primary me-2"></i>
+                            <p class="mb-0">NSTI(w) Noida UP</p>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <i class="bi bi-envelope-open text-primary me-2"></i>
+                            <p class="mb-0">fitlife@gmail.com</p>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <i class="bi bi-telephone text-primary me-2"></i>
+                            <p class="mb-0">+19 841-8081-396</p>
+                        </div>
+                        <div class="d-flex mt-4">
+                            <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-primary btn-square rounded-circle" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
                     </div>
-                    <div class="d-flex mb-2">
-                        <i class="bi bi-envelope-open text-primary me-2"></i>
-                        <p class="mb-0">fitlife@gmail.com</p>
+                    <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                        <h4 class="text-uppercase text-light mb-4">Quick Links</h4>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                            <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
+                            <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Dashboard</a>
+                            <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>WorkOut</a>
+                            <a class="text-secondary" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                        </div>
                     </div>
-                    <div class="d-flex mb-2">
-                        <i class="bi bi-telephone text-primary me-2"></i>
-                        <p class="mb-0">+19 841-8081-396</p>
-                    </div>
-                    <div class="d-flex mt-4">
-                        <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="btn btn-primary btn-square rounded-circle" href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
-                    <h4 class="text-uppercase text-light mb-4">Quick Links</h4>
-                    <div class="d-flex flex-column justify-content-start">
-                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Dashboard</a>
-                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>WorkOut</a>
-                        <a class="text-secondary" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
-                    <h4 class="text-uppercase text-light mb-4">Popular Links</h4>
-                    <div class="d-flex flex-column justify-content-start">
-                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Dashboard</a>
-                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>WorkOut</a>
-                        <a class="text-secondary" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                    <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                        <h4 class="text-uppercase text-light mb-4">Popular Links</h4>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                            <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
+                            <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Dashboard</a>
+                            <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>WorkOut</a>
+                            <a class="text-secondary" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-            <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-5">
-                <h4 class="text-uppercase text-white mb-4">our Store</h4>
-                <h6 class="text-uppercase text-white">Please Sign Up to visit</h6>
-                <p class="text-light">We provide all types of fitness related nutrients & health foods.</p>
-                <form action="">
-                    <div class="input-group">
-                        <input type="text" class="form-control border-white p-3" placeholder="Your Email">
-                        <button class="btn btn-dark">Sign Up</button>
-                    </div>
-                </form>
+            <div class="col-lg-4 col-md-6">
+                <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-5">
+                    <h4 class="text-uppercase text-white mb-4">our Store</h4>
+                    <h6 class="text-uppercase text-white">Please Sign Up to visit</h6>
+                    <p class="text-light">We provide all types of fitness related nutrients & health foods.</p>
+                    <form action="">
+                        <div class="input-group">
+                            <input type="text" class="form-control border-white p-3" placeholder="Your Email">
+                            <button class="btn btn-dark">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 </div>
 <div class="container-fluid py-4 py-lg-0 px-5" style="background: #111111;">
-    <div class="row gx-5">
-        <div class="col-lg-8">
-            <div class="py-lg-4 text-center">
-                <p class="text-secondary mb-0">&copy; <a class="text-light fw-bold" href="#">Fit4Life</a>. All Rights Reserved.</p>
+        <div class="row gx-5">
+            <div class="col-lg-8">
+                <div class="py-lg-4 text-center">
+                    <p class="text-secondary mb-0">&copy; <a class="text-light fw-bold" href="#">Fit4Life</a>. All Rights Reserved.</p>
+                </div>
             </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="py-lg-4 text-center credit">
-                <p class="text-light mb-0">Designed by <a class="text-light fw-bold">Health Heros</a></p>
+            <div class="col-lg-4">
+                <div class="py-lg-4 text-center credit">
+                    <p class="text-light mb-0">Designed by <a class="text-light fw-bold">Health Heros</a></p>
+                </div>
             </div>
         </div>
     </div>
 </div>
-<!-- Footer End -->
-=======
->>>>>>> cc524da77d71b5cd91b346108c0b67277cd34527
-    
-    <script>
-        function getQueryParam(param) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(param);
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const videoTitle = getQueryParam('title');
-            const animationSrc = getQueryParam('animation');
-            const musclesSrc = getQueryParam('muscles');
-            const howToDoSrc = getQueryParam('howToDo');
-            const videoInstructions = getQueryParam('instructions');
-
-            document.getElementById('video-title').textContent = videoTitle;
-            document.getElementById('animation-video').src = animationSrc;
-            document.getElementById('muscles-video').src = musclesSrc;
-            document.getElementById('how-to-do-video').src = howToDoSrc;
-            document.getElementById('instructions').textContent = videoInstructions;
-
-            // Activate the first tab by default
-            document.querySelector('.tab-btn').classList.add('active');
-            document.querySelector('.tab-content').classList.add('active');
-            
-            document.querySelectorAll('.tab-btn').forEach(button => {
-                button.addEventListener('click', () => {
-                    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-                    document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
-
-                    button.classList.add('active');
-                    document.querySelector(button.getAttribute('data-target')).classList.add('active');
-                });
-            });
-        });
-    </script>
+    <!-- Footer End -->
+   <!-- Back to Top -->
+    <a href="#" class="btn btn-dark py-3 fs-4 back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/video.js"></script>
 </body>
 </html>

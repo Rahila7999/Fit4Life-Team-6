@@ -20,83 +20,12 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/workout.css" rel="stylesheet">
 
-    <style>
-        .section-selector {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 2rem;
-        }
-        .section-selector button {
-            margin: 0 10px;
-            padding: 10px 20px;
-            border: none;
-            background-color: #f0f0f0;
-            cursor: pointer;
-        }
-        .section-selector button.active {
-            background-color: #ff7300;
-            color: #fff;
-        }
-        .workout-container {
-            display: none;
-        }
-        .workout-container.active {
-            display: block;
-        }
-        .video-section {
-            overflow-x: auto;
-            white-space: nowrap;
-            margin-bottom: 2rem;
-        }
-        .video-section .video-container {
-            display: inline-block;
-            width: 300px;
-            margin-right: 50px;
-            position: relative;
-        }
-        .video-container video {
-            width: 100%;
-        }
-        .video-container .video-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.3s;
-            cursor: pointer;
-        }
-        
-
-.read-more {
-    position: absolute;
-    bottom: 10px; /* Adjust as needed */
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-}
-
-.read-more button {
-    background-color:  #ff7300;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-    </style>
 </head>
 <body>
-      <!-- Header Start -->
-      <div class="container-fluid bg-dark px-0">
+    <!-- Header Start -->
+    <div class="container-fluid bg-dark px-0">
         <div class="row gx-0">
             <div class="col-lg-3 bg-dark d-none d-lg-flex align-items-center justify-content-center">
                 <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
@@ -115,11 +44,7 @@
                         <div class="navbar-nav mr-auto py-0">
                             <a href="index.html" class="nav-item nav-link active">Home</a>
                             <a href="workout.html" class="nav-item nav-link">Workout</a>
-<<<<<<< HEAD
                             <a href="Dashboard/index.html" class="nav-item nav-link">Dashboard</a>
-=======
-                            <a href="/Frontend/Dashboard/index.html" class="nav-item nav-link">Dashboard</a>
->>>>>>> cc524da77d71b5cd91b346108c0b67277cd34527
                             <a href="about.html" class="nav-item nav-link">About</a>
                             <a href="contact.html" class="nav-item nav-link">Contact</a>
                         </div>
@@ -131,13 +56,7 @@
             </div>
         </div>
     </div>
-    
-    
     <!-- Header End -->
-<<<<<<< HEAD
-=======
-    <!-- Header End -->
->>>>>>> cc524da77d71b5cd91b346108c0b67277cd34527
 
     <!-- Main Content Start -->
     <div class="container my-5">
@@ -148,126 +67,23 @@
             <button id="advanced-btn">Advanced</button>
         </div>
 
-<!--------------------------------------------------------------Beginner Workout Section Start----------------------------------------------->
-       <div id="beginner-workout" class="workout-container active">
-        <h3 class="text-center mb-4">Beginner</h3>
-        <!--Abs Beginner Section Start-->
+<!--------------------------Beginner Workout Section Start------------------------------>
+<div id="beginner-workout" class="workout-container active">
+    <h3 class="text-center mb-4">Beginner</h3>
+    <!-- Abs Beginner Section Start -->
+    <div class="container my-5">
+        <h4>Abs Beginner (20mins . 16 workouts)</h4>
+
         <div class="video-section">
-            <h4>Abs Beginner (20mins . 16 workouts)</h4>
+            <!-- Video containers -->
             <div class="video-container">
                 <video autoplay muted loop>
-<<<<<<< HEAD
                     <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-=======
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
->>>>>>> cc524da77d71b5cd91b346108c0b67277cd34527
                     Your browser does not support the video tag.
                 </video>
                 <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-<<<<<<< HEAD
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://www.youtube.com/embed/2W4ZNSwoW_4?si=tVLg0MBDP0JIqkeE', 'Start with your feet together and your arms by your sides, then jump up with your feet apart and your hands overhead.<br> Return to the start position then do the next rep.')">Read More</button>
-=======
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://www.youtube.com/embed/2W4ZNSwoW_4?si=tVLg0MBDP0JIqkeE', 'hello jumping jacks')">Read More</button>
->>>>>>> cc524da77d71b5cd91b346108c0b67277cd34527
-                </div>
-            </div>
-            <div class="video-container">
-                    <video autoplay muted controls loop>
-<<<<<<< HEAD
-                        <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277272/Sadhana/Beginner%20Workout/Abs%20Beginner/russiantwist.mp4" type="video/mp4">
-=======
-                        <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665806/Abs%20Beginner/abdominalcrunches.mp4" type="video/mp4">
->>>>>>> cc524da77d71b5cd91b346108c0b67277cd34527
-                        Your browser does not support the video.
-                    </video>
-                    <div class="video-overlay">Play Video</div>
-                    <div class="read-more">
-<<<<<<< HEAD
-                        <button class="read-more-btn" onclick="readMore('Russian Twist', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277272/Sadhana/Beginner%20Workout/Abs%20Beginner/russiantwist.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-=======
-                        <button class="read-more-btn" onclick="readMore('Abdominal Crunches', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665806/Abs%20Beginner/abdominalcrunches.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
->>>>>>> cc524da77d71b5cd91b346108c0b67277cd34527
-                    </div>  
-            </div>
-            <div class="video-container">
-                <video autoplay muted controls loop>
-<<<<<<< HEAD
-                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/abdonimalcrunches.mp4" type="video/mp4">
-=======
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665809/Abs%20Beginner/russiantwist.mp4" type="video/mp4">
->>>>>>> cc524da77d71b5cd91b346108c0b67277cd34527
-                    Your browser does not support the video.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-<<<<<<< HEAD
-                    <button class="read-more-btn" onclick="readMore('Abdonimal Crunches', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/abdonimalcrunches.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-=======
-                    <button class="read-more-btn" onclick="readMore('Russian Twist', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665809/Abs%20Beginner/russiantwist.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
->>>>>>> cc524da77d71b5cd91b346108c0b67277cd34527
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted controls loop>
-<<<<<<< HEAD
-                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277269/Sadhana/Beginner%20Workout/Abs%20Beginner/mountainclimber.mp4" type="video/mp4">
-=======
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665815/Abs%20Beginner/mountainclimber.mp4" type="video/mp4">
->>>>>>> cc524da77d71b5cd91b346108c0b67277cd34527
-                    Your browser does not support the video.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-<<<<<<< HEAD
-                    <button class="read-more-btn" onclick="readMore('Mountain Climber', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277269/Sadhana/Beginner%20Workout/Abs%20Beginner/mountainclimber.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-=======
-                    <button class="read-more-btn" onclick="readMore('Mountain Climber', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665815/Abs%20Beginner/mountainclimber.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
->>>>>>> cc524da77d71b5cd91b346108c0b67277cd34527
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted controls loop>
-<<<<<<< HEAD
-                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277270/Sadhana/Beginner%20Workout/Abs%20Beginner/heeltouch.mp4" type="video/mp4">
-                    Your browser does not support the video.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Heel Touch', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277270/Sadhana/Beginner%20Workout/Abs%20Beginner/heeltouch.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted controls loop>
-                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277262/Sadhana/Beginner%20Workout/Abs%20Beginner/legraises.mp4" type="video/mp4">
-                    Your browser does not support the video.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Leg Raises', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277262/Sadhana/Beginner%20Workout/Abs%20Beginner/legraises.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
             </div>
 
-=======
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665803/Abs%20Beginner/heeltouch.mp4" type="video/mp4">
-                    Your browser does not support the video.
-                </video>
-                <div class="video-overlay">Play Video</div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted controls loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665804/Abs%20Beginner/legraises.mp4" type="video/mp4">
-                    Your browser does not support the video.
-                </video>
-                <div class="video-overlay">Play Video</div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted controls loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665806/Abs%20Beginner/plank.mp4" type="video/mp4">
-                    Your browser does not support the video.
-                </video>
-                <div class="video-overlay">Play Video</div>
-            </div>
             <div class="video-container">
                 <video autoplay muted controls loop>
                     <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665806/Abs%20Beginner/abdominalcrunches.mp4" type="video/mp4">
@@ -275,6 +91,7 @@
                 </video>
                 <div class="video-overlay">Play Video</div>
             </div>
+
             <div class="video-container">
                 <video autoplay muted controls loop>
                     <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665809/Abs%20Beginner/russiantwist.mp4" type="video/mp4">
@@ -282,702 +99,107 @@
                 </video>
                 <div class="video-overlay">Play Video</div>
             </div>
+
             <div class="video-container">
                 <video autoplay muted controls loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665815/Abs%20Beginner/mountainclimber.mp4" type="video/mp4">
+                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665809/Abs%20Beginner/russiantwist.mp4" type="video/mp4">
                     Your browser does not support the video.
                 </video>
                 <div class="video-overlay">Play Video</div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted controls loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665803/Abs%20Beginner/heeltouch.mp4" type="video/mp4">
-                    Your browser does not support the video.
-                </video>
-                <div class="video-overlay">Play Video</div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted controls loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665804/Abs%20Beginner/legraises.mp4" type="video/mp4">
-                    Your browser does not support the video.
-                </video>
-                <div class="video-overlay">Play Video</div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted controls loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665806/Abs%20Beginner/plank.mp4" type="video/mp4">
-                    Your browser does not support the video.
-                </video>
-                <div class="video-overlay">Play Video</div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted controls loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665803/Abs%20Beginner/cobrastretch.mp4" type="video/mp4">
-                    Your browser does not support the video.
-                </video>
-                <div class="video-overlay">Play Video</div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted controls loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665809/Abs%20Beginner/stretchleft.mp4" type="video/mp4">
-                    Your browser does not support the video.
-                </video>
-                <div class="video-overlay">Play Video</div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted controls loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665811/Abs%20Beginner/stretchright.mp4" type="video/mp4">
-                    Your browser does not support the video.
-                </video>
-                <div class="video-overlay">Play Video</div>
-            </div>
->>>>>>> cc524da77d71b5cd91b346108c0b67277cd34527
-        </div>
-        <!--Arm Beginner End-->
-        <!--Chest Beginner Start-->
-        <div class="video-section">
-            <h4>Chest Beginner (7mins . 11 workouts)</h4>
-            <div class="video-container">
-                <video autoplay muted loop>
-<<<<<<< HEAD
-                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-=======
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
->>>>>>> cc524da77d71b5cd91b346108c0b67277cd34527
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-<<<<<<< HEAD
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://www.youtube.com/embed/2W4ZNSwoW_4?si=tVLg0MBDP0JIqkeE', 'Start with your feet together and your arms by your sides, then jump up with your feet apart and your hands overhead.<br> Return to the start position then do the next rep.')">Read More</button>
-=======
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
->>>>>>> cc524da77d71b5cd91b346108c0b67277cd34527
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-<<<<<<< HEAD
-                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277431/Sadhana/Beginner%20Workout/Chest%20Beginner/a9egrt5vrbgohkmnhsld.mp4" type="video/mp4">
-=======
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
->>>>>>> cc524da77d71b5cd91b346108c0b67277cd34527
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-<<<<<<< HEAD
-                    <button class="read-more-btn" onclick="readMore('Incline Push-Ups', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277431/Sadhana/Beginner%20Workout/Chest%20Beginner/a9egrt5vrbgohkmnhsld.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://www.youtube.com/embed/2W4ZNSwoW_4?si=tVLg0MBDP0JIqkeE', 'Start with your feet together and your arms by your sides, then jump up with your feet apart and your hands overhead.<br> Return to the start position then do the next rep.')">Read More</button>
-=======
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
->>>>>>> cc524da77d71b5cd91b346108c0b67277cd34527
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-<<<<<<< HEAD
-                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277434/Sadhana/Beginner%20Workout/Chest%20Beginner/widearmpushups.mp4" type="video/mp4">
-=======
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
->>>>>>> cc524da77d71b5cd91b346108c0b67277cd34527
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-<<<<<<< HEAD
-                    <button class="read-more-btn" onclick="readMore('Wide Arm Push-Ups', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277434/Sadhana/Beginner%20Workout/Chest%20Beginner/widearmpushups.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://www.youtube.com/embed/2W4ZNSwoW_4?si=tVLg0MBDP0JIqkeE', 'Start with your feet together and your arms by your sides, then jump up with your feet apart and your hands overhead.<br> Return to the start position then do the next rep.')">Read More</button>
-                </div>
-            </div>
-        </div>
-                
-=======
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-        </div>
->>>>>>> cc524da77d71b5cd91b346108c0b67277cd34527
-        <!--Chest Beginner End-->
-        <!--Arm Beginner Start-->
-        <div class="video-section">
-            <h4>Arm Beginner (17mins . 19 workouts)</h4>
-            <div class="video-container">
-                <video autoplay muted loop>
-<<<<<<< HEAD
-                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-=======
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
->>>>>>> cc524da77d71b5cd91b346108c0b67277cd34527
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-<<<<<<< HEAD
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://www.youtube.com/embed/2W4ZNSwoW_4?si=tVLg0MBDP0JIqkeE', 'Start with your feet together and your arms by your sides, then jump up with your feet apart and your hands overhead.<br> Return to the start position then do the next rep.')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                    <video autoplay muted controls loop>
-                        <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277272/Sadhana/Beginner%20Workout/Abs%20Beginner/russiantwist.mp4" type="video/mp4">
-                        Your browser does not support the video.
-                    </video>
-                    <div class="video-overlay">Play Video</div>
-                    <div class="read-more">
-                        <button class="read-more-btn" onclick="readMore('Russian Twist', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277272/Sadhana/Beginner%20Workout/Abs%20Beginner/russiantwist.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                    </div>  
-            </div>
-            <div class="video-container">
-                <video autoplay muted controls loop>
-                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/abdonimalcrunches.mp4" type="video/mp4">
-                    Your browser does not support the video.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Abdonimal Crunches', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/abdonimalcrunches.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted controls loop>
-                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277269/Sadhana/Beginner%20Workout/Abs%20Beginner/mountainclimber.mp4" type="video/mp4">
-                    Your browser does not support the video.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Mountain Climber', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277269/Sadhana/Beginner%20Workout/Abs%20Beginner/mountainclimber.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted controls loop>
-                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277270/Sadhana/Beginner%20Workout/Abs%20Beginner/heeltouch.mp4" type="video/mp4">
-                    Your browser does not support the video.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Heel Touch', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277270/Sadhana/Beginner%20Workout/Abs%20Beginner/heeltouch.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted controls loop>
-                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277262/Sadhana/Beginner%20Workout/Abs%20Beginner/legraises.mp4" type="video/mp4">
-                    Your browser does not support the video.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Leg Raises', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277262/Sadhana/Beginner%20Workout/Abs%20Beginner/legraises.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
             </div>
 
-=======
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
->>>>>>> cc524da77d71b5cd91b346108c0b67277cd34527
-        </div>
-        <!--Arm Beginner End-->
-        <!--Leg Beginner Start-->
-        <div class="video-section">
-            <h4>Leg Beginner (26mins . 23 workouts)</h4>
-            <div class="video-container">
-                <video autoplay muted loop>
-<<<<<<< HEAD
-                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-=======
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
->>>>>>> cc524da77d71b5cd91b346108c0b67277cd34527
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-<<<<<<< HEAD
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://www.youtube.com/embed/2W4ZNSwoW_4?si=tVLg0MBDP0JIqkeE', 'Start with your feet together and your arms by your sides, then jump up with your feet apart and your hands overhead.<br> Return to the start position then do the next rep.')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                    <video autoplay muted controls loop>
-                        <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277272/Sadhana/Beginner%20Workout/Abs%20Beginner/russiantwist.mp4" type="video/mp4">
-                        Your browser does not support the video.
-                    </video>
-                    <div class="video-overlay">Play Video</div>
-                    <div class="read-more">
-                        <button class="read-more-btn" onclick="readMore('Russian Twist', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277272/Sadhana/Beginner%20Workout/Abs%20Beginner/russiantwist.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                    </div>  
-            </div>
-            <div class="video-container">
-                <video autoplay muted controls loop>
-                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/abdonimalcrunches.mp4" type="video/mp4">
-                    Your browser does not support the video.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Abdonimal Crunches', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/abdonimalcrunches.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted controls loop>
-                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277269/Sadhana/Beginner%20Workout/Abs%20Beginner/mountainclimber.mp4" type="video/mp4">
-                    Your browser does not support the video.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Mountain Climber', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277269/Sadhana/Beginner%20Workout/Abs%20Beginner/mountainclimber.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted controls loop>
-                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277270/Sadhana/Beginner%20Workout/Abs%20Beginner/heeltouch.mp4" type="video/mp4">
-                    Your browser does not support the video.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Heel Touch', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277270/Sadhana/Beginner%20Workout/Abs%20Beginner/heeltouch.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted controls loop>
-                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277262/Sadhana/Beginner%20Workout/Abs%20Beginner/legraises.mp4" type="video/mp4">
-                    Your browser does not support the video.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Leg Raises', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277262/Sadhana/Beginner%20Workout/Abs%20Beginner/legraises.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-=======
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
->>>>>>> cc524da77d71b5cd91b346108c0b67277cd34527
-                </div>
+            <!-- Single Read More button -->
+            <div class="read-more">
+                <button class="read-more-btn" onclick="readMore('Abs Beginner', 'abs-beginner')">Read More</button>
             </div>
         </div>
-        <!--Leg Beginner End-->
-        <!--Shoulder & Back Beginner Start-->
-        <div class="video-section">
-            <h4>Shoulder & Back Beginner (17mins . 17 workouts)</h4>
-            <div class="video-container">
-                <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-            <div class="video-container">
-                <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay">Play Video</div>
-                <div class="read-more">
-                    <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                </div>
-            </div>
-        </div>
-        <!--Shoulder & Back Beginner End-->
     </div>
-<!---------------------------------------------------------- Beginner Workout Section End---------------------------------------------------->
+    <!-- Abs Beginner End -->
 
-<<<<<<< HEAD
-<!---------------------------------------------------------- Intermediate Workout Section Start---------------------------------------------------------------------------->
-=======
-<!-- Intermediate Workout Section Start -->
->>>>>>> cc524da77d71b5cd91b346108c0b67277cd34527
+    <!-- Chest Beginner Section Start -->
+    <div class="container my-5">
+        <h4>Chest Beginner (7mins . 11 workouts)</h4>
+
+        <div class="video-section">
+            <!-- Video containers -->
+            <div class="video-container">
+                <video autoplay muted loop>
+                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Chest%20Beginner/pushups.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665806/Chest%20Beginner/benchpress.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665809/Chest%20Beginner/chestfly.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+            <!-- Single Read More button -->
+            <div class="read-more">
+                <button class="read-more-btn" onclick="readMore('Chest Beginner', 'chest-beginner')">Read More</button>
+            </div>
+        </div>
+    </div>
+    <!-- Chest Beginner End -->
+
+    <!-- Arm Beginner Section Start -->
+    <div class="container my-5">
+        <h4>Arm Beginner (7mins . 11 workouts)</h4>
+
+        <div class="video-section">
+            <!-- Video containers -->
+            <div class="video-container">
+                <video autoplay muted loop>
+                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Arm%20Beginner/bicepcurls.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665806/Arm%20Beginner/tricepdips.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665809/Arm%20Beginner/hammercurls.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+            <!-- Single Read More button -->
+            <div class="read-more">
+                <button class="read-more-btn" onclick="readMore('Arm Beginner', 'arm-beginner')">Read More</button>
+            </div>
+        </div>
+    </div>
+    <!-- Arm Beginner End -->
+</div>
+<!--------------------------- Beginner Workout Section End------------------------------------->
+
+
+<!-------------------------- Intermediate Workout Section Start ------------------------------->
         <div id="intermediate-workout" class="workout-container">
             <h3 class="text-center mb-4">Intermediate</h3>
             <div class="video-section">
                 <h4>Abs Intermediate (25min . 16 workouts)</h4>
                 <div class="video-container">
                     <video autoplay muted loop>
-<<<<<<< HEAD
-                        <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="video-overlay">Play Video</div>
-                    <div class="read-more">
-                        <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://www.youtube.com/embed/2W4ZNSwoW_4?si=tVLg0MBDP0JIqkeE', 'Start with your feet together and your arms by your sides, then jump up with your feet apart and your hands overhead.<br> Return to the start position then do the next rep.')">Read More</button>
-                    </div>
-                </div>
-                <div class="video-container">
-                        <video autoplay muted controls loop>
-                            <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277272/Sadhana/Beginner%20Workout/Abs%20Beginner/russiantwist.mp4" type="video/mp4">
-                            Your browser does not support the video.
-                        </video>
-                        <div class="video-overlay">Play Video</div>
-                        <div class="read-more">
-                            <button class="read-more-btn" onclick="readMore('Russian Twist', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277272/Sadhana/Beginner%20Workout/Abs%20Beginner/russiantwist.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                        </div>  
-                </div>
-                <div class="video-container">
-                    <video autoplay muted controls loop>
-                        <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/abdonimalcrunches.mp4" type="video/mp4">
-                        Your browser does not support the video.
-                    </video>
-                    <div class="video-overlay">Play Video</div>
-                    <div class="read-more">
-                        <button class="read-more-btn" onclick="readMore('Abdonimal Crunches', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/abdonimalcrunches.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                    </div>
-                </div>
-                <div class="video-container">
-                    <video autoplay muted controls loop>
-                        <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277269/Sadhana/Beginner%20Workout/Abs%20Beginner/mountainclimber.mp4" type="video/mp4">
-                        Your browser does not support the video.
-                    </video>
-                    <div class="video-overlay">Play Video</div>
-                    <div class="read-more">
-                        <button class="read-more-btn" onclick="readMore('Mountain Climber', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277269/Sadhana/Beginner%20Workout/Abs%20Beginner/mountainclimber.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                    </div>
-                </div>
-                <div class="video-container">
-                    <video autoplay muted controls loop>
-                        <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277270/Sadhana/Beginner%20Workout/Abs%20Beginner/heeltouch.mp4" type="video/mp4">
-                        Your browser does not support the video.
-                    </video>
-                    <div class="video-overlay">Play Video</div>
-                    <div class="read-more">
-                        <button class="read-more-btn" onclick="readMore('Heel Touch', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277270/Sadhana/Beginner%20Workout/Abs%20Beginner/heeltouch.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                    </div>
-                </div>
-                <div class="video-container">
-                    <video autoplay muted controls loop>
-                        <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277262/Sadhana/Beginner%20Workout/Abs%20Beginner/legraises.mp4" type="video/mp4">
-                        Your browser does not support the video.
-                    </video>
-                    <div class="video-overlay">Play Video</div>
-                    <div class="read-more">
-                        <button class="read-more-btn" onclick="readMore('Leg Raises', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277262/Sadhana/Beginner%20Workout/Abs%20Beginner/legraises.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                    </div>
-                </div>
-    
-        </div>
-        <!--------------------------------------------------------------------- Intermediate Workout Section EnD-------------------------------------------------------------->
-=======
                         <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665769/Abs%20Intermediate/jumpingjacks.mp4" type="video/mp4">
                         Your browser does not support the video.
                     </video>
@@ -1032,279 +254,21 @@
                     </video>
                     <div class="video-overlay">Play Video</div>
                 </div>
+                <!-- Single Read More button -->
+            <div class="read-more">
+                <button class="read-more-btn" onclick="readMore('Abs Intermediate', 'abs-intermediate')">Read More</button>
+            </div>
             </div>
         </div>
-        <!-- Intermediate Workout Section End -->
->>>>>>> cc524da77d71b5cd91b346108c0b67277cd34527
+        <!-------------------------- Intermediate Workout Section End ------------------------->
 
-        <!-- Advanced Workout Section Start -->
+        <!---------------------------- Advanced Workout Section Start ------------------------------>
         <div id="advanced-workout" class="workout-container">
             <h3 class="text-center mb-4">Advanced</h3>
             <div class="video-section">
                 <h4>Abs Advanced (30min . 16 workouts)</h4>
                 <div class="video-container">
                     <video autoplay muted loop>
-<<<<<<< HEAD
-                        <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="video-overlay">Play Video</div>
-                    <div class="read-more">
-                        <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://www.youtube.com/embed/2W4ZNSwoW_4?si=tVLg0MBDP0JIqkeE', 'Start with your feet together and your arms by your sides, then jump up with your feet apart and your hands overhead.<br> Return to the start position then do the next rep.')">Read More</button>
-                    </div>
-                </div>
-                <div class="video-container">
-                        <video autoplay muted controls loop>
-                            <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277272/Sadhana/Beginner%20Workout/Abs%20Beginner/russiantwist.mp4" type="video/mp4">
-                            Your browser does not support the video.
-                        </video>
-                        <div class="video-overlay">Play Video</div>
-                        <div class="read-more">
-                            <button class="read-more-btn" onclick="readMore('Russian Twist', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277272/Sadhana/Beginner%20Workout/Abs%20Beginner/russiantwist.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                        </div>  
-                </div>
-                <div class="video-container">
-                    <video autoplay muted controls loop>
-                        <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/abdonimalcrunches.mp4" type="video/mp4">
-                        Your browser does not support the video.
-                    </video>
-                    <div class="video-overlay">Play Video</div>
-                    <div class="read-more">
-                        <button class="read-more-btn" onclick="readMore('Abdonimal Crunches', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/abdonimalcrunches.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                    </div>
-                </div>
-                <div class="video-container">
-                    <video autoplay muted controls loop>
-                        <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277269/Sadhana/Beginner%20Workout/Abs%20Beginner/mountainclimber.mp4" type="video/mp4">
-                        Your browser does not support the video.
-                    </video>
-                    <div class="video-overlay">Play Video</div>
-                    <div class="read-more">
-                        <button class="read-more-btn" onclick="readMore('Mountain Climber', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277269/Sadhana/Beginner%20Workout/Abs%20Beginner/mountainclimber.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                    </div>
-                </div>
-                <div class="video-container">
-                    <video autoplay muted controls loop>
-                        <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277270/Sadhana/Beginner%20Workout/Abs%20Beginner/heeltouch.mp4" type="video/mp4">
-                        Your browser does not support the video.
-                    </video>
-                    <div class="video-overlay">Play Video</div>
-                    <div class="read-more">
-                        <button class="read-more-btn" onclick="readMore('Heel Touch', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277270/Sadhana/Beginner%20Workout/Abs%20Beginner/heeltouch.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                    </div>
-                </div>
-                <div class="video-container">
-                    <video autoplay muted controls loop>
-                        <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277262/Sadhana/Beginner%20Workout/Abs%20Beginner/legraises.mp4" type="video/mp4">
-                        Your browser does not support the video.
-                    </video>
-                    <div class="video-overlay">Play Video</div>
-                    <div class="read-more">
-                        <button class="read-more-btn" onclick="readMore('Leg Raises', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277262/Sadhana/Beginner%20Workout/Abs%20Beginner/legraises.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                    </div>
-                </div>    
-        </div>
-
-        <div id="advanced-workout" class="workout-container">
-            <h3 class="text-center mb-4">Advanced</h3>
-            <div class="video-section">
-                <h4>Chest Advanced (30min . 16 workouts)</h4>
-                <div class="video-container">
-                    <video autoplay muted loop>
-                        <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="video-overlay">Play Video</div>
-                    <div class="read-more">
-                        <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://www.youtube.com/embed/2W4ZNSwoW_4?si=tVLg0MBDP0JIqkeE', 'Start with your feet together and your arms by your sides, then jump up with your feet apart and your hands overhead.<br> Return to the start position then do the next rep.')">Read More</button>
-                    </div>
-                </div>
-                <div class="video-container">
-                        <video autoplay muted controls loop>
-                            <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277272/Sadhana/Beginner%20Workout/Abs%20Beginner/russiantwist.mp4" type="video/mp4">
-                            Your browser does not support the video.
-                        </video>
-                        <div class="video-overlay">Play Video</div>
-                        <div class="read-more">
-                            <button class="read-more-btn" onclick="readMore('Russian Twist', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277272/Sadhana/Beginner%20Workout/Abs%20Beginner/russiantwist.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                        </div>  
-                </div>
-                <div class="video-container">
-                    <video autoplay muted controls loop>
-                        <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/abdonimalcrunches.mp4" type="video/mp4">
-                        Your browser does not support the video.
-                    </video>
-                    <div class="video-overlay">Play Video</div>
-                    <div class="read-more">
-                        <button class="read-more-btn" onclick="readMore('Abdonimal Crunches', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/abdonimalcrunches.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                    </div>
-                </div>
-                <div class="video-container">
-                    <video autoplay muted controls loop>
-                        <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277269/Sadhana/Beginner%20Workout/Abs%20Beginner/mountainclimber.mp4" type="video/mp4">
-                        Your browser does not support the video.
-                    </video>
-                    <div class="video-overlay">Play Video</div>
-                    <div class="read-more">
-                        <button class="read-more-btn" onclick="readMore('Mountain Climber', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277269/Sadhana/Beginner%20Workout/Abs%20Beginner/mountainclimber.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                    </div>
-                </div>
-                <div class="video-container">
-                    <video autoplay muted controls loop>
-                        <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277270/Sadhana/Beginner%20Workout/Abs%20Beginner/heeltouch.mp4" type="video/mp4">
-                        Your browser does not support the video.
-                    </video>
-                    <div class="video-overlay">Play Video</div>
-                    <div class="read-more">
-                        <button class="read-more-btn" onclick="readMore('Heel Touch', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277270/Sadhana/Beginner%20Workout/Abs%20Beginner/heeltouch.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                    </div>
-                </div>
-                <div class="video-container">
-                    <video autoplay muted controls loop>
-                        <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277262/Sadhana/Beginner%20Workout/Abs%20Beginner/legraises.mp4" type="video/mp4">
-                        Your browser does not support the video.
-                    </video>
-                    <div class="video-overlay">Play Video</div>
-                    <div class="read-more">
-                        <button class="read-more-btn" onclick="readMore('Leg Raises', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277262/Sadhana/Beginner%20Workout/Abs%20Beginner/legraises.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                    </div>
-                </div>    
-        </div>
-
-        <div id="advanced-workout" class="workout-container">
-            <h3 class="text-center mb-4">Advanced</h3>
-            <div class="video-section">
-                <h4>Arm Advanced (30min . 16 workouts)</h4>
-                <div class="video-container">
-                    <video autoplay muted loop>
-                        <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="video-overlay">Play Video</div>
-                    <div class="read-more">
-                        <button class="read-more-btn" onclick="readMore('Jumping Jacks', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/jumpingjacks.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://www.youtube.com/embed/2W4ZNSwoW_4?si=tVLg0MBDP0JIqkeE', 'Start with your feet together and your arms by your sides, then jump up with your feet apart and your hands overhead.<br> Return to the start position then do the next rep.')">Read More</button>
-                    </div>
-                </div>
-                <div class="video-container">
-                        <video autoplay muted controls loop>
-                            <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277272/Sadhana/Beginner%20Workout/Abs%20Beginner/russiantwist.mp4" type="video/mp4">
-                            Your browser does not support the video.
-                        </video>
-                        <div class="video-overlay">Play Video</div>
-                        <div class="read-more">
-                            <button class="read-more-btn" onclick="readMore('Russian Twist', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277272/Sadhana/Beginner%20Workout/Abs%20Beginner/russiantwist.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                        </div>  
-                </div>
-                <div class="video-container">
-                    <video autoplay muted controls loop>
-                        <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/abdonimalcrunches.mp4" type="video/mp4">
-                        Your browser does not support the video.
-                    </video>
-                    <div class="video-overlay">Play Video</div>
-                    <div class="read-more">
-                        <button class="read-more-btn" onclick="readMore('Abdonimal Crunches', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/abdonimalcrunches.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                    </div>
-                </div>
-                <div class="video-container">
-                    <video autoplay muted controls loop>
-                        <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277269/Sadhana/Beginner%20Workout/Abs%20Beginner/mountainclimber.mp4" type="video/mp4">
-                        Your browser does not support the video.
-                    </video>
-                    <div class="video-overlay">Play Video</div>
-                    <div class="read-more">
-                        <button class="read-more-btn" onclick="readMore('Mountain Climber', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277269/Sadhana/Beginner%20Workout/Abs%20Beginner/mountainclimber.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                    </div>
-                </div>
-                <div class="video-container">
-                    <video autoplay muted controls loop>
-                        <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277270/Sadhana/Beginner%20Workout/Abs%20Beginner/heeltouch.mp4" type="video/mp4">
-                        Your browser does not support the video.
-                    </video>
-                    <div class="video-overlay">Play Video</div>
-                    <div class="read-more">
-                        <button class="read-more-btn" onclick="readMore('Heel Touch', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277270/Sadhana/Beginner%20Workout/Abs%20Beginner/heeltouch.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                    </div>
-                </div>
-                <div class="video-container">
-                    <video autoplay muted controls loop>
-                        <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277262/Sadhana/Beginner%20Workout/Abs%20Beginner/legraises.mp4" type="video/mp4">
-                        Your browser does not support the video.
-                    </video>
-                    <div class="video-overlay">Play Video</div>
-                    <div class="read-more">
-                        <button class="read-more-btn" onclick="readMore('Leg Raises', 'https://res.cloudinary.com/deup6t83x/video/upload/v1721277262/Sadhana/Beginner%20Workout/Abs%20Beginner/legraises.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/muscles.mp4', 'https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Abs%20Beginner/howtodo.mp4', 'hello jumping jacks')">Read More</button>
-                    </div>
-                </div>    
-        </div>
-        </div>
-        </div>
-    </div>
-    <!-- Main Content End -->
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-secondary px-5 mt-5">
-        <div class="row gx-5">
-            <div class="col-lg-8 col-md-6">
-                <div class="row gx-5">
-                    <div class="col-lg-4 col-md-12 pt-5 mb-5">
-                        <h4 class="text-uppercase text-light mb-4">Get In Touch</h4>
-                        <div class="d-flex mb-2">
-                            <i class="bi bi-geo-alt text-primary me-2"></i>
-                            <p class="mb-0">NSTI(w) Noida UP</p>
-                        </div>
-                        <div class="d-flex mb-2">
-                            <i class="bi bi-envelope-open text-primary me-2"></i>
-                            <p class="mb-0">fitlife@gmail.com</p>
-                        </div>
-                        <div class="d-flex mb-2">
-                            <i class="bi bi-telephone text-primary me-2"></i>
-                            <p class="mb-0">+19 841-8081-396</p>
-                        </div>
-                        <div class="d-flex mt-4">
-                            <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-primary btn-square rounded-circle" href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
-                        <h4 class="text-uppercase text-light mb-4">Quick Links</h4>
-                        <div class="d-flex flex-column justify-content-start">
-                            <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                            <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                            <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Dashboard</a>
-                            <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>WorkOut</a>
-                            <a class="text-secondary" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
-                        <h4 class="text-uppercase text-light mb-4">Popular Links</h4>
-                        <div class="d-flex flex-column justify-content-start">
-                            <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                            <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                            <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Dashboard</a>
-                            <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>WorkOut</a>
-                            <a class="text-secondary" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-5">
-                    <h4 class="text-uppercase text-white mb-4">our Store</h4>
-                    <h6 class="text-uppercase text-white">Please Sign Up to visit</h6>
-                    <p class="text-light">We provide all types of fitness related nutrients & health foods.</p>
-                    <form action="">
-                        <div class="input-group">
-                            <input type="text" class="form-control border-white p-3" placeholder="Your Email">
-                            <button class="btn btn-dark">Sign Up</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-=======
                         <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665763/Abs%20Advanced/jumpingjacks.mp4" type="video/mp4">
                         Your browser does not support the video.
                     </video>
@@ -1361,31 +325,91 @@
                 </div>
             </div>
         </div>
-        <!-- Advanced Workout Section End -->
+        <!-------------------------------- Advanced Workout Section End --------------------------->
     </div>
     <!-- Main Content End -->
-    <!-- Footer Start -->
->>>>>>> cc524da77d71b5cd91b346108c0b67277cd34527
-    <div class="container-fluid py-4 py-lg-0 px-5" style="background: #111111;">
-        <div class="row gx-5">
-            <div class="col-lg-8">
-                <div class="py-lg-4 text-center">
-                    <p class="text-secondary mb-0">&copy; <a class="text-light fw-bold" href="#">Fit4Life</a>. All Rights Reserved.</p>
+   <!-- Footer Start -->
+   <div class="container-fluid bg-dark text-secondary px-5 mt-5">
+    <div class="row gx-5">
+        <div class="col-lg-8 col-md-6">
+            <div class="row gx-5">
+                <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                    <h4 class="text-uppercase text-light mb-4">Get In Touch</h4>
+                    <div class="d-flex mb-2">
+                        <i class="bi bi-geo-alt text-primary me-2"></i>
+                        <p class="mb-0">NSTI(w) Noida UP</p>
+                    </div>
+                    <div class="d-flex mb-2">
+                        <i class="bi bi-envelope-open text-primary me-2"></i>
+                        <p class="mb-0">fitlife@gmail.com</p>
+                    </div>
+                    <div class="d-flex mb-2">
+                        <i class="bi bi-telephone text-primary me-2"></i>
+                        <p class="mb-0">+19 841-8081-396</p>
+                    </div>
+                    <div class="d-flex mt-4">
+                        <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-primary btn-square rounded-circle" href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="py-lg-4 text-center credit">
-                    <p class="text-light mb-0">Designed by <a class="text-light fw-bold">Health Heros</a></p>
+                <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                    <h4 class="text-uppercase text-light mb-4">Quick Links</h4>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
+                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Dashboard</a>
+                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>WorkOut</a>
+                        <a class="text-secondary" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                    <h4 class="text-uppercase text-light mb-4">Popular Links</h4>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
+                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Dashboard</a>
+                        <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>WorkOut</a>
+                        <a class="text-secondary" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-5">
+                <h4 class="text-uppercase text-white mb-4">our Store</h4>
+                <h6 class="text-uppercase text-white">Please Sign Up to visit</h6>
+                <p class="text-light">We provide all types of fitness related nutrients & health foods.</p>
+                <form action="">
+                    <div class="input-group">
+                        <input type="text" class="form-control border-white p-3" placeholder="Your Email">
+                        <button class="btn btn-dark">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-    <!-- Footer End -->
+</div>
+<div class="container-fluid py-4 py-lg-0 px-5" style="background: #111111;">
+    <div class="row gx-5">
+        <div class="col-lg-8">
+            <div class="py-lg-4 text-center">
+                <p class="text-secondary mb-0">&copy; <a class="text-light fw-bold" href="#">Fit4Life</a>. All Rights Reserved.</p>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="py-lg-4 text-center credit">
+                <p class="text-light mb-0">Designed by <a class="text-light fw-bold">Health Heros</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
 
-<<<<<<< HEAD
 
-=======
->>>>>>> cc524da77d71b5cd91b346108c0b67277cd34527
+<!-- Back to Top -->
+<a href="#" class="btn btn-dark py-3 fs-4 back-to-top"><i class="bi bi-arrow-up"></i></a>
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -1413,11 +437,10 @@
             document.getElementById(level + '-btn').classList.add('active');
             document.getElementById(level + '-workout').classList.add('active');
         }
-        
-        function readMore(title, animation, muscles, howToDo, instructions) {
-        const url = `video.html?title=${encodeURIComponent(title)}&animation=${encodeURIComponent(animation)}&muscles=${encodeURIComponent(muscles)}&howToDo=${encodeURIComponent(howToDo)}&instructions=${encodeURIComponent(instructions)}`;
-        window.location.href = url;
-    }
-    </script>
+        function readMore(title, type) {
+    console.log(`Redirecting to video.html with title=${title} and type=${type}`);
+    window.location.href = `video.html?title=${encodeURIComponent(title)}&type=${encodeURIComponent(type)}`;
+}
+</script>
 </body>
 </html>
