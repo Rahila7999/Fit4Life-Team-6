@@ -208,9 +208,8 @@
 							<!-- <a class="dropdown-item" href="faq.html"
 								><i class="dw dw-help"></i> Help</a
 							> -->
-							<a class="dropdown-item" href="/Frontend/index.html"
-								><i class="dw dw-logout"></i> Log Out</a
-							>
+							<a id="logoutButton" class="dropdown-item" href="/Frontend/index.html"><i class="dw dw-logout"></i> Log Out</a>
+
 						</div>
 					</div>
 				</div>
@@ -641,5 +640,31 @@
 			></iframe
 		></noscript>
 		<!-- End Google Tag Manager (noscript) -->
+		<script>
+			function checkLoginState() {
+				const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+				const logoutButton = document.getElementById('logoutButton');
+		
+				if (isLoggedIn) {
+					// Always show the logout button
+					if (logoutButton) {
+						logoutButton.style.display = 'block'; // Ensure the logout button is visible
+						logoutButton.onclick = function() {
+							localStorage.removeItem('isLoggedIn');
+							window.location.href = "index.html"; // Redirect to index.html on logout
+						};
+					}
+				} else {
+					// Optionally, you can hide the button or handle it if needed
+					if (logoutButton) {
+						logoutButton.style.display = 'none'; // Hide if not logged in
+					}
+				}
+			}
+		
+			// Run the function to check login state on page load
+			document.addEventListener('DOMContentLoaded', checkLoginState);
+		</script>
+		
 	</body>
 </html>
