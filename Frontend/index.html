@@ -272,34 +272,52 @@
     <script src="js/main.js"></script>
     <script>
         function checkLoginState() {
-    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-    const authButton = document.getElementById('authButton');
-    const dashboardLink = document.querySelector('.nav-item.nav-link[href="Dashboard/index.html"]');
-
-    if (isLoggedIn) {
-        authButton.textContent = 'Logout';
-        authButton.onclick = function() {
-            localStorage.removeItem('isLoggedIn');
-            window.location.href = "index.html";
-        };
-        if (dashboardLink) {
-            dashboardLink.style.display = 'inline'; // Show the dashboard link
+            const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+            const authButton = document.getElementById('authButton');
+            const dashboardLink = document.querySelector('.nav-item.nav-link[href="Dashboard/index.html"]');
+            const registerButton = document.querySelector('a[href="/Frontend/signup.html"]');
+            const contactButton = document.querySelector('a[href="/Frontend/contact.html"]');
+    
+            if (authButton) {
+                if (isLoggedIn) {
+                    authButton.textContent = 'Logout';
+                    authButton.onclick = function() {
+                        localStorage.removeItem('isLoggedIn');
+                        window.location.href = "index.html";
+                    };
+                } else {
+                    authButton.textContent = 'Login';
+                    authButton.onclick = function() {
+                        window.location.href = "login.html";
+                    };
+                }
+            } else {
+                console.error('Auth button not found');
+            }
+    
+            if (dashboardLink) {
+                dashboardLink.style.display = isLoggedIn ? 'inline' : 'none'; // Show or hide the dashboard link
+            } else {
+                console.error('Dashboard link not found');
+            }
+    
+            if (registerButton) {
+                registerButton.style.display = isLoggedIn ? 'none' : 'inline'; // Hide or show the register button
+            } else {
+                console.error('Register button not found');
+            }
+    
+            if (contactButton) {
+                contactButton.style.display = isLoggedIn ? 'none' : 'inline'; // Hide or show the contact button
+            } else {
+                console.error('Contact button not found');
+            }
         }
-    } else {
-        authButton.textContent = 'Login';
-        authButton.onclick = function() {
-            window.location.href = "login.html";
-        };
-        if (dashboardLink) {
-            dashboardLink.style.display = 'none'; // Hide the dashboard link
-        }
-    }
-}
-
-// Run the function to check login state on page load
-document.addEventListener('DOMContentLoaded', checkLoginState);
-
+    
+        // Run the function to check login state on page load
+        document.addEventListener('DOMContentLoaded', checkLoginState);
     </script>
+    
 </body>
 
 </html>
