@@ -162,14 +162,20 @@ input{
 
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator{
-    color: rgba(0, 0, 0, 0);
-    opacity: 1;
-    display: block;
-    background: url('bx-cake.svg') no-repeat;
-    height: 20px;
-    width: 20px;
+/* Remove custom styles for date input and indicator */
+input[type="date"] {
+    padding: 2%;
+    font-size: 1rem;
+    background-color: #F4F5F8; /* Ensure background color is applied correctly */
+    color: #222429;
+    width: 100%; /* Adjust width as needed */
 }
+
+/* Optional: Reset indicator customization */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: block; /* Default display */
+}
+
  .text-fields.fname:after{
     content: 'First name';
     background-color: #F4F5F8;
@@ -195,7 +201,7 @@ input[type="date"]::-webkit-calendar-picker-indicator{
     background-color: #F4F5F8;
     position: relative;
     padding: 0 4%;
-    left: -205px;
+    left: -175px;
     width: 342px;
     color:#FB5B21;
     top: -33px;
@@ -295,7 +301,13 @@ input[type="radio"]{
 label.tc{
     margin-left: 4%;
 }
-
+.error-message {
+    color: red;
+    font-size: 0.875em;
+    margin-top: 0.25em;
+    display: block;
+}
+/*login*/
 .login-form-contents{
     display: flex;
     flex-direction: column;

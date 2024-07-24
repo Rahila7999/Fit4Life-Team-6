@@ -13,35 +13,47 @@
             <div class="logo">
                 <i class='bx bx-pencilf'></i>
                 <span class="text">Fit4Life</span>
-
             </div>
             <p class="side-big-hedaing">Create your Account</p>
             <p class="primary-bg-text">To keep track on your dashboard please login with your personal info.</p>
-            <a href="/Frontend/signup.html"class="loginbtn">Register now</a>
+            <a href="/Frontend/signup.html" class="loginbtn">Register now</a>
         </div>
-        <form action="" class="signup-form-container">
+        <form id="loginForm" class="signup-form-container">
             <p class="big-heading">Login to your account</p>
             <br><br><br>
             <div class="login-form-contents">
-
                 <div class="text-fields email">
                     <label for="email"><i class='bx bx-envelope'></i></label>
                     <input type="email" name="email" id="email" placeholder="Enter your email id">
-                 
                 </div>
-
                 <div class="text-fields password">
-                    <label for="password"><i class='bx bx-lock-alt' ></i></label>
-                  <input type="password" name="password" id="password" placeholder="Enter password">
-            
+                    <label for="password"><i class='bx bx-lock-alt'></i></label>
+                    <input type="password" name="password" id="password" placeholder="Enter password">
                 </div>
-
                 <a href="/Frontend/forgot.html" class="forgot-password">Forgot Password?</a>
                 <br>
-
             </div>
-            <input type="submit" value="Login" class="nextPage">
+            <input type="button" value="Login" onclick="submitLoginDetails()" class="nextPage">
         </form>
-    </body>
-<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    </div>
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script>
+        function submitLoginDetails() {
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            if (email && password) {
+                // Assuming login is successful after validation
+                alert('Login successful!');
+                // Set login state in localStorage
+                localStorage.setItem('isLoggedIn', 'true');
+                // Redirect to index page after successful login
+                window.location.href = "index.html";
+            } else {
+                alert('Please enter email and password');
+            }
+        }
+    </script>
+</body>
 </html>

@@ -6,7 +6,6 @@
     <title>Registration form</title>
     <link rel="stylesheet" href="css/login.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    
 </head>
 <body>
     <div class="container">
@@ -14,15 +13,14 @@
             <div class="logo">
                 <i class='bx bx-pencil'></i>
                 <span class="text">Fit4Life</span>
-
             </div>
-            <p class="side-big-hedaing">Already a member ?</p>
-            <p class="primary-bg-text">To keep track on your dashboard please login with your personal info.</p>
-            <a href="/Frontend/login.html"class="loginbtn">Login</a>
+            <p class="side-big-hedaing">Already a member?</p>
+            <p class="primary-bg-text">To keep track of your dashboard, please log in with your personal info.</p>
+            <a href="/Frontend/login.html" class="loginbtn">Login</a>
         </div>
-        <form action="" class="signup-form-container">
+        <form class="signup-form-container">
             <p class="big-heading">Create Account</p>
-              <br><br><br>
+            <br><br><br>
 
             <div class="progress-bar">
                 <div class="stage">
@@ -53,66 +51,53 @@
                         </div>
                     </div>
                     <div class="button-container">
-                    <div class="text-fields dob">
-                        <input type ="date" name="dob" id="dob">
-                    </div>
-                    <div class="gender-selection">
-                        <p class="fields-heading">Gender :</p>
-                        <label for="male">
-                            <input type="radio" name="gender" id="male">Male
-                        </label>
-                        <label for="female">
-                            <input type="radio" name="gender" id="female">Female
-                        </label>
-                    </div>
+                        <div class="text-fields dob">
+                            <input type="date" name="dob" id="dob">
+                        </div>
+                        <div class="gender-selection">
+                            <p class="fields-heading">Gender :</p>
+                            <label for="male">
+                                <input type="radio" name="gender" id="male">Male
+                            </label>
+                            <label for="female">
+                                <input type="radio" name="gender" id="female">Female
+                            </label>
+                        </div>
                     </div>
                     <div class="pagination-btns">
-                       
-                       
                         <input type="button" value="Next" class="nextPage stagebtn1b" onclick="stage1to2()">
                     </div>
-                    
                 </div>
 
-                <!--stage2-content  -->
-
+                <!--stage2-content-->
                 <div class="stage2-content">
                     <div class="button-container">
                         <div class="text-fields phone">
-                           <label for="phone"><i class='bx bx-phone'></i></label>
-                           <input type="text" name="phone" id="phone" placeholder="phone number">
+                            <label for="phone"><i class='bx bx-phone'></i></label>
+                            <input type="text" name="phone" id="phone" placeholder="Phone number">
                         </div>
-
                         <div class="text-fields email">
                             <label for="email"><i class='bx bx-envelope'></i></label>
                             <input type="email" name="email" id="email" placeholder="Enter your email id">
                         </div>
                     </div>
-
-                        <div class="button-container">
-                            <div class="text-fields password">
-                                <label for="password"><i class='bx bx-lock-alt' ></i></label>
-                              <input type="password" name="password" id="password" placeholder="Enter password">
-                            </div>
-
-
-                            <div class="text-fields confirmpassword">
-                                <label for="confirmpassword"><i class='bx bx-lock-alt' ></i></label>
-                              <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Enter password">
-                            </div>
+                    <div class="button-container">
+                        <div class="text-fields password">
+                            <label for="password"><i class='bx bx-lock-alt'></i></label>
+                            <input type="password" name="password" id="password" placeholder="Enter password">
                         </div>
-
-
+                        <div class="text-fields confirmpassword">
+                            <label for="confirmpassword"><i class='bx bx-lock-alt'></i></label>
+                            <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirm password">
+                        </div>
+                    </div>
                     <div class="pagination-btns">
                         <input type="button" value="Previous" class="previousPage stagebtn2a" onclick="stage2to1()">
-                        <input type="button" value="Next" class="nextPage stagebtn2b"onclick="stage2to3()">
+                        <input type="button" value="Next" class="nextPage stagebtn2b" onclick="stage2to3()">
                     </div>
-                        
                 </div>
 
-
-                
-<!-- stage3-content -->
+                <!-- stage3-content -->
                 <div class="stage3-content">
                     <div class="tc-container">
                         <label for="tc" class="tc">
@@ -120,24 +105,17 @@
                             By submitting your details, you agree to the <a href="#">terms and conditions.</a>
                         </label>
                     </div>
-                    
                     <div class="pagination-btns">
-                        <input type="button" value="Previous" class="previousPage stagebtn3a"onclick="stage3to2()">
+                        <input type="button" value="Previous" class="previousPage stagebtn3a" onclick="stage3to2()">
                         <input type="submit" value="Submit" class="nextPage stagebtn3b">
                     </div>
-                        
                 </div>
-  
             </div>
-
         </form>
     </div>
-    
 
-</body>
-<script>
-    let signupContent = document.querySelector(".signup-form-container"),
-        
+    <script>
+        let signupContent = document.querySelector(".signup-form-container"),
     stagebtn1b = document.querySelector(".stagebtn1b"),
     stagebtn2a = document.querySelector(".stagebtn2a"),
     stagebtn2b = document.querySelector(".stagebtn2b"),
@@ -146,39 +124,120 @@
     signupContent1 = document.querySelector(".stage1-content"),
     signupContent2 = document.querySelector(".stage2-content"),
     signupContent3 = document.querySelector(".stage3-content");
-    
-    signupContent2.style.display = "none"
-    signupContent3.style.display = "none"
 
-    function stage1to2(){
-        signupContent1.style.display = "none"
-        signupContent2.style.display = "block"
-        signupContent3.style.display = "none"
+signupContent2.style.display = "none";
+signupContent3.style.display = "none";
+
+function validateStage1() {
+    let fname = document.getElementById('fname').value;
+    let lname = document.getElementById('lname').value;
+    let dob = document.getElementById('dob').value;
+    let gender = document.querySelector('input[name="gender"]:checked');
+
+    // Check for empty fields
+    if (!fname || !lname || !dob || !gender) {
+        alert('Please fill out all fields in Stage 1');
+        return false;
+    }
+
+    // Check if names contain only letters
+    if (!/^[A-Za-z]+$/.test(fname)) {
+        alert('First name should only contain letters');
+        return false;
+    }
+    if (!/^[A-Za-z]+$/.test(lname)) {
+        alert('Last name should only contain letters');
+        return false;
+    }
+
+    return true;
+}
+
+function validateStage2() {
+    let phone = document.getElementById('phone').value;
+    let email = document.getElementById('email').value;
+    let password = document.getElementById('password').value;
+    let confirmpassword = document.getElementById('confirmpassword').value;
+
+    // Check for empty fields
+    if (!phone || !email || !password || !confirmpassword) {
+        alert('Please fill out all fields in Stage 2');
+        return false;
+    }
+
+    // Check if email format is valid
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        alert('Please enter a valid email address');
+        return false;
+    }
+
+    // Check if passwords match
+    if (password !== confirmpassword) {
+        alert('Passwords do not match');
+        return false;
+    }
+
+    // Check password strength
+    if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,12}$/.test(password)) {
+        alert('Password must be 8-12 characters long, include at least one uppercase letter, one lowercase letter, one number, and one special character');
+        return false;
+    }
+
+    return true;
+}
+
+function validateStage3() {
+    let tc = document.getElementById('tc').checked;
+
+    if (!tc) {
+        alert('You must agree to the terms and conditions');
+        return false;
+    }
+    return true;
+}
+
+function stage1to2() {
+    if (validateStage1()) {
+        signupContent1.style.display = "none";
+        signupContent2.style.display = "block";
+        signupContent3.style.display = "none";
         document.querySelector(".stageno-1").innerText = "\u2713";
         document.querySelector(".stageno-1").style.backgroundColor = "#52ec61";
         document.querySelector(".stageno-1").style.color = "#fff";
-
-
     }
-    function stage2to1(){
-        signupContent1.style.display = "block"
-        signupContent2.style.display = "none"
-        signupContent3.style.display = "none"
-    }
-    function stage2to3(){
-        signupContent1.style.display = "none"
-        signupContent2.style.display = "none"
-        signupContent3.style.display = "block"
+}
+
+function stage2to1() {
+    signupContent1.style.display = "block";
+    signupContent2.style.display = "none";
+    signupContent3.style.display = "none";
+}
+
+function stage2to3() {
+    if (validateStage2()) {
+        signupContent1.style.display = "none";
+        signupContent2.style.display = "none";
+        signupContent3.style.display = "block";
         document.querySelector(".stageno-2").innerText = "\u2713";
         document.querySelector(".stageno-2").style.backgroundColor = "#52ec61";
         document.querySelector(".stageno-2").style.color = "#fff";
     }
-    function stage3to2(){
-        signupContent1.style.display = "none"
-        signupContent2.style.display = "block"
-        signupContent3.style.display = "none"
+}
+
+function stage3to2() {
+    signupContent1.style.display = "none";
+    signupContent2.style.display = "block";
+    signupContent3.style.display = "none";
+}
+
+document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+    if (validateStage3()) {
+        window.location.href = 'login.html'; // Redirect to login page
     }
-    
+});
+
     </script>
-<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
 </html>

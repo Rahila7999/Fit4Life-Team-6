@@ -42,14 +42,14 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
-                            <a href="/Frontend/index.html" class="nav-item nav-link active">Home</a>
-                            <a href="/Frontend/workout.html" class="nav-item nav-link">Workout</a>
-                            <a href="/Frontend/Dashboard/index.html" class="nav-item nav-link">Dashboard</a>
-                            <a href="/Frontend/about.html" class="nav-item nav-link">About</a>
-                            <a href="/Frontend/contact.html" class="nav-item nav-link">Contact</a>
+                            <a href="index.html" class="nav-item nav-link active">Home</a>
+                            <a href="workout.html" class="nav-item nav-link">Workout</a>
+                            <a href="Dashboard/index.html" class="nav-item nav-link">Dashboard</a>
+                            <a href="about.html" class="nav-item nav-link">About</a>
+                            <a href="contact.html" class="nav-item nav-link">Contact</a>
                         </div>
                         <div class="d-flex justify-content-end">
-                            <a href="/Frontend/login.html" class="btn btn-primary py-md-3 px-md-5 d-none d-lg-block">Login</a>
+                            <button id="authButton" class="btn btn-primary py-md-3 px-md-5 d-none d-lg-block"></button>
                         </div>
                     </div>
                 </nav>
@@ -59,7 +59,8 @@
     <!-- Header End -->
 
     <!-- Main Content Start -->
-    <div class="container my-5">
+    <div class="background-wrapper">
+    <div class="container mx-8 my-4">
         <h2 class="text-center mb-4">Home Workout</h2>
         <div class="section-selector">
             <button id="beginner-btn" class="active">Beginner</button>
@@ -67,11 +68,11 @@
             <button id="advanced-btn">Advanced</button>
         </div>
 
-<!--------------------------Beginner Workout Section Start------------------------------>
-<div id="beginner-workout" class="workout-container active">
-    <h3 class="text-center mb-4">Beginner</h3>
-    <!-- Abs Beginner Section Start -->
-    <div class="container my-5">
+        <!--------------------------Beginner Workout Section Start------------------------------>
+        <div id="beginner-workout" class="workout-container active">
+        <h3 class="text-center mb-4">Beginner</h3>
+         <!-- Abs Beginner Section Start -->
+         <div class="container my-5">
         <h4>Abs Beginner (20mins . 16 workouts)</h4>
 
         <div class="video-section">
@@ -86,7 +87,7 @@
 
             <div class="video-container">
                 <video autoplay muted controls loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665806/Abs%20Beginner/abdominalcrunches.mp4" type="video/mp4">
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277272/Sadhana/Beginner%20Workout/Abs%20Beginner/russiantwist.mp4" type="video/mp4">
                     Your browser does not support the video.
                 </video>
                 <div class="video-overlay">Play Video</div>
@@ -94,7 +95,7 @@
 
             <div class="video-container">
                 <video autoplay muted controls loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665809/Abs%20Beginner/russiantwist.mp4" type="video/mp4">
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/abdonimalcrunches.mp4" type="video/mp4">
                     Your browser does not support the video.
                 </video>
                 <div class="video-overlay">Play Video</div>
@@ -102,7 +103,7 @@
 
             <div class="video-container">
                 <video autoplay muted controls loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665809/Abs%20Beginner/russiantwist.mp4" type="video/mp4">
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277269/Sadhana/Beginner%20Workout/Abs%20Beginner/mountainclimber.mp4" type="video/mp4">
                     Your browser does not support the video.
                 </video>
                 <div class="video-overlay">Play Video</div>
@@ -113,11 +114,11 @@
                 <button class="read-more-btn" onclick="readMore('Abs Beginner', 'abs-beginner')">Read More</button>
             </div>
         </div>
-    </div>
-    <!-- Abs Beginner End -->
+        </div>
+     <!-- Abs Beginner End -->
 
-    <!-- Chest Beginner Section Start -->
-    <div class="container my-5">
+        <!-- Chest Beginner Section Start -->
+        <div class="container my-5">
         <h4>Chest Beginner (7mins . 11 workouts)</h4>
 
         <div class="video-section">
@@ -150,11 +151,11 @@
                 <button class="read-more-btn" onclick="readMore('Chest Beginner', 'chest-beginner')">Read More</button>
             </div>
         </div>
-    </div>
-    <!-- Chest Beginner End -->
+     </div>
+     <!-- Chest Beginner End -->
 
-    <!-- Arm Beginner Section Start -->
-    <div class="container my-5">
+     <!-- Arm Beginner Section Start -->
+     <div class="container my-5">
         <h4>Arm Beginner (7mins . 11 workouts)</h4>
 
         <div class="video-section">
@@ -187,13 +188,13 @@
                 <button class="read-more-btn" onclick="readMore('Arm Beginner', 'arm-beginner')">Read More</button>
             </div>
         </div>
-    </div>
-    <!-- Arm Beginner End -->
-</div>
-<!--------------------------- Beginner Workout Section End------------------------------------->
+        </div>
+     <!-- Arm Beginner End -->
+        </div>
+        <!--------------------------- Beginner Workout Section End------------------------------------->
 
 
-<!-------------------------- Intermediate Workout Section Start ------------------------------->
+        <!-------------------------- Intermediate Workout Section Start ------------------------------->
         <div id="intermediate-workout" class="workout-container">
             <h3 class="text-center mb-4">Intermediate</h3>
             <div class="video-section">
@@ -327,10 +328,11 @@
         </div>
         <!-------------------------------- Advanced Workout Section End --------------------------->
     </div>
-    <!-- Main Content End -->
-   <!-- Footer Start -->
-   <div class="container-fluid bg-dark text-secondary px-5 mt-5">
-    <div class="row gx-5">
+    </div>
+     <!-- Main Content End -->
+        <!-- Footer Start -->
+     <div class="container-fluid bg-dark text-secondary px-5 mt-5">
+        <div class="row gx-5">
         <div class="col-lg-8 col-md-6">
             <div class="row gx-5">
                 <div class="col-lg-4 col-md-12 pt-5 mb-5">
@@ -389,11 +391,11 @@
                 </form>
             </div>
         </div>
-    </div>
-</div>
-<div class="container-fluid py-4 py-lg-0 px-5" style="background: #111111;">
-    <div class="row gx-5">
-        <div class="col-lg-8">
+     </div>
+     </div>
+     <div class="container-fluid py-4 py-lg-0 px-5" style="background: #111111;">
+       <div class="row gx-5">
+            <div class="col-lg-8">
             <div class="py-lg-4 text-center">
                 <p class="text-secondary mb-0">&copy; <a class="text-light fw-bold" href="#">Fit4Life</a>. All Rights Reserved.</p>
             </div>
@@ -402,9 +404,9 @@
             <div class="py-lg-4 text-center credit">
                 <p class="text-light mb-0">Designed by <a class="text-light fw-bold">Health Heros</a></p>
             </div>
+         </div>
         </div>
     </div>
-</div>
 <!-- Footer End -->
 
 
@@ -441,6 +443,33 @@
     console.log(`Redirecting to video.html with title=${title} and type=${type}`);
     window.location.href = `video.html?title=${encodeURIComponent(title)}&type=${encodeURIComponent(type)}`;
 }
+function checkLoginState() {
+        const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+        const authButton = document.getElementById('authButton');
+        const dashboardLink = document.querySelector('.nav-item.nav-link[href="Dashboard/index.html"]');
+    
+        if (isLoggedIn) {
+            authButton.textContent = 'Logout';
+            authButton.onclick = function() {
+                localStorage.removeItem('isLoggedIn');
+                window.location.href = "index.html";
+            };
+            if (dashboardLink) {
+                dashboardLink.style.display = 'inline'; // Show the dashboard link
+            }
+        } else {
+            authButton.textContent = 'Login';
+            authButton.onclick = function() {
+                window.location.href = "login.html";
+            };
+            if (dashboardLink) {
+                dashboardLink.style.display = 'none'; // Hide the dashboard link
+            }
+        }
+    }
+    
+    // Run the function to check login state on page load
+    document.addEventListener('DOMContentLoaded', checkLoginState);
 </script>
 </body>
 </html>

@@ -1,40 +1,101 @@
+/* Section Selector */
 .section-selector {
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
 }
+
 .section-selector button {
     margin: 0 10px;
     padding: 10px 20px;
     border: none;
     background-color: #f0f0f0;
     cursor: pointer;
+    font-size: 1rem; /* Adjust font size if needed */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
 }
+
 .section-selector button.active {
     background-color: #ff7300;
     color: #fff;
 }
+
+/* Workout Container */
+#beginner-workout {
+    position: relative;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
 .workout-container {
     display: none;
 }
+
 .workout-container.active {
     display: block;
 }
+/* Styling for h3 with background */
+h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff; /* White text color */
+    background-color: #ff7300; /* Background color */
+    padding: 10px; /* Padding around text */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 1rem;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+}
+
+/* Styling for h4 with border */
+h4 {
+    font-size: 1.25rem;
+    font-weight: normal;
+    color: #333;
+    border-bottom: 2px solid #ff7300; /* Bottom border */
+    padding-bottom: 5px; /* Padding below text */
+    margin-bottom: 0.5rem;
+    text-align: center;
+    transition: border-color 0.3s, color 0.3s; /* Smooth transitions */
+}
+
+/* Hover effects */
+h3:hover {
+    background-color: #ff5722; /* Change background color on hover */
+    color: #fff; /* Ensure text remains readable */
+}
+
+h4:hover {
+    border-color: #ff5722; /* Change border color on hover */
+    color: #ff5722; /* Change text color on hover */
+}
+
+/* Video Section */
 .video-section {
     overflow-x: auto;
     white-space: nowrap;
-    margin-bottom: 2rem;
-    position: relative; /* Added */
+    margin-bottom: 1rem;
+    position: relative;
 }
+
+/* Video Container */
 .video-section .video-container {
     display: inline-block;
     width: 300px;
-    margin-right: 50px;
+    padding: 20px;
     position: relative;
+    transition: transform 0.3s; /* Smooth transition for moving up */
 }
+
+/* Video Element */
 .video-container video {
     width: 100%;
+    display: block; /* Ensure video takes up full container width */
+    transition: transform 0.3s; /* Smooth transition for scaling */
 }
+
+/* Video Overlay */
 .video-container .video-overlay {
     position: absolute;
     top: 0;
@@ -42,7 +103,7 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    color: #fff;
+    color: transparent; /* Hide text */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,22 +111,38 @@
     transition: opacity 0.3s;
     cursor: pointer;
 }
+
 .video-container:hover .video-overlay {
     opacity: 1;
 }
+
+.video-container:hover {
+    transform: translateY(-10px); /* Move the container up on hover */
+}
+
+.video-container:hover video {
+    transform: scale(1.05); /* Optionally scale the video */
+}
+
+/* Read More Section */
 .read-more {
-    position: relative; /* Changed from absolute to relative */
-    margin-top: 5px; /* Added margin */
+    margin-top: 1rem; /* Adjust as needed */
     text-align: center;
 }
+
 .read-more button {
     background-color: #ff7300;
     color: #fff;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    border-radius: 5px; /* Optional: Add rounded corners */
 }
+
+.read-more button:hover {
+    background-color: #e65c00; /* Slightly darker orange on hover */
+}
+
 /*----------------Video CSS--------------*/
 
 .container-fluid.d-flex {
