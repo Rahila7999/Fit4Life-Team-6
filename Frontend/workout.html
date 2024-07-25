@@ -424,7 +424,14 @@
         </div>
     </div>
 <!-- Footer End -->
-
+<!-- Modal for login prompt -->
+<div id="loginPromptModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Please log in to access the videos.</p>
+        <button id="loginNowBtn" class="btn btn-primary">Login Now</button>
+    </div>
+</div>
 
 <!-- Back to Top -->
 <a href="#" class="btn btn-dark py-3 fs-4 back-to-top"><i class="bi bi-arrow-up"></i></a>
@@ -435,31 +442,28 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script>
-        document.getElementById('beginner-btn').addEventListener('click', function() {
-            setActiveSection('beginner');
+    document.getElementById('beginner-btn').addEventListener('click', function() {
+        setActiveSection('beginner');
+    });
+    document.getElementById('intermediate-btn').addEventListener('click', function() {
+        setActiveSection('intermediate');
+    });
+    document.getElementById('advanced-btn').addEventListener('click', function() {
+        setActiveSection('advanced');
+    });
+    
+    function setActiveSection(level) {
+        document.querySelectorAll('.section-selector button').forEach(function(btn) {
+            btn.classList.remove('active');
         });
-        document.getElementById('intermediate-btn').addEventListener('click', function() {
-            setActiveSection('intermediate');
+        document.querySelectorAll('.workout-container').forEach(function(container) {
+            container.classList.remove('active');
         });
-        document.getElementById('advanced-btn').addEventListener('click', function() {
-            setActiveSection('advanced');
-        });
-
-        function setActiveSection(level) {
-            document.querySelectorAll('.section-selector button').forEach(function(btn) {
-                btn.classList.remove('active');
-            });
-            document.querySelectorAll('.workout-container').forEach(function(container) {
-                container.classList.remove('active');
-            });
-            document.getElementById(level + '-btn').classList.add('active');
-            document.getElementById(level + '-workout').classList.add('active');
-        }
-        function readMore(title, type) {
-    console.log(`Redirecting to video.html with title=${title} and type=${type}`);
-    window.location.href = `video.html?title=${encodeURIComponent(title)}&type=${encodeURIComponent(type)}`;
-}
-function checkLoginState() {
+        document.getElementById(level + '-btn').classList.add('active');
+        document.getElementById(level + '-workout').classList.add('active');
+    }
+    
+    function checkLoginState() {
         const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
         const authButton = document.getElementById('authButton');
         const dashboardLink = document.querySelector('.nav-item.nav-link[href="Dashboard/index.html"]');
@@ -484,8 +488,47 @@ function checkLoginState() {
         }
     }
     
-    // Run the function to check login state on page load
     document.addEventListener('DOMContentLoaded', checkLoginState);
+    
+    function readMore(title, type) {
+        const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+        if (isLoggedIn) {
+            console.log(`Redirecting to video.html with title=${title} and type=${type}`);
+            window.location.href = `video.html?title=${encodeURIComponent(title)}&type=${encodeURIComponent(type)}`;
+        } else {
+            // Set data attributes for the login button
+            const loginNowBtn = document.getElementById('loginNowBtn');
+            loginNowBtn.setAttribute('data-title', title);
+            loginNowBtn.setAttribute('data-type', type);
+            // Show login prompt modal
+            document.getElementById('loginPromptModal').style.display = 'block';
+        }
+    }
+    
+    // Modal functionality
+    const modal = document.getElementById('loginPromptModal');
+    const closeModal = document.getElementsByClassName('close')[0];
+    const loginNowBtn = document.getElementById('loginNowBtn');
+    
+    closeModal.onclick = function() {
+        modal.style.display = 'none';
+    }
+    
+    loginNowBtn.onclick = function() {
+    const title = encodeURIComponent(loginNowBtn.getAttribute('data-title'));
+    const type = encodeURIComponent(loginNowBtn.getAttribute('data-type'));
+    // Construct the URL correctly
+    const redirectUrl = `video.html?title=${title}&type=${type}`;
+    // Redirect to login page with the redirect URL as a parameter
+    window.location.href = `login.html?redirect=${encodeURIComponent(redirectUrl)}`;
+}
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+    
 </script>
 </body>
 </html>

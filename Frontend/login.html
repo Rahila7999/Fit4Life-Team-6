@@ -58,71 +58,65 @@
         }
 
         function validatePassword() {
-    var password = document.getElementById('password').value;
-
-    var uppercase = /[A-Z]/.test(password);
-    var lowercase = /[a-z]/.test(password);
-    var number = /\d/.test(password);
-    var specialChar = /[@$!%*?&]/.test(password);
-    var length = password.length >= 8 && password.length <= 12;
-
-    document.getElementById('uppercase').className = uppercase ? 'valid' : 'invalid';
-    document.getElementById('lowercase').className = lowercase ? 'valid' : 'invalid';
-    document.getElementById('number').className = number ? 'valid' : 'invalid';
-    document.getElementById('specialChar').className = specialChar ? 'valid' : 'invalid';
-    document.getElementById('length').className = length ? 'valid' : 'invalid';
-
-    // Check if all validations are met
-    if (uppercase && lowercase && number && specialChar && length) {
-        document.getElementById('passwordValidation').style.display = 'none'; // Hide the validation box
-    } else {
-        document.getElementById('passwordValidation').style.display = 'block'; // Show the validation box
-    }
-}
-
-function showPasswordValidation() {
-    document.getElementById('passwordValidation').style.display = 'block';
-}
-
-function hidePasswordValidation() {
-    var password = document.getElementById('password').value;
-    if (!password) {
-        document.getElementById('passwordValidation').style.display = 'none';
-    }
-}
-
-
-        function submitLoginDetails() {
-            var email = document.getElementById('email').value;
             var password = document.getElementById('password').value;
-            var errorMessage = '';
 
-            // Check if email is empty
-            if (!email) {
-                errorMessage += 'Please enter your email.\n';
-            } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-                errorMessage += 'Please enter a valid email address.\n';
-            }
+            var uppercase = /[A-Z]/.test(password);
+            var lowercase = /[a-z]/.test(password);
+            var number = /\d/.test(password);
+            var specialChar = /[@$!%*?&]/.test(password);
+            var length = password.length >= 8 && password.length <= 12;
 
-            // Check if password is empty
-            if (!password) {
-                errorMessage += 'Please enter your password.\n';
-            } else if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,12}$/.test(password)) {
-                errorMessage += 'Password must be 8-12 characters long, include at least one uppercase letter, one lowercase letter, one number, and one special character.\n';
-            }
+            document.getElementById('uppercase').className = uppercase ? 'valid' : 'invalid';
+            document.getElementById('lowercase').className = lowercase ? 'valid' : 'invalid';
+            document.getElementById('number').className = number ? 'valid' : 'invalid';
+            document.getElementById('specialChar').className = specialChar ? 'valid' : 'invalid';
+            document.getElementById('length').className = length ? 'valid' : 'invalid';
 
-            // Display error messages or proceed with login
-            if (errorMessage) {
-                alert(errorMessage.trim());
+            // Check if all validations are met
+            if (uppercase && lowercase && number && specialChar && length) {
+                document.getElementById('passwordValidation').style.display = 'none'; // Hide the validation box
             } else {
-                // Assuming login is successful after validation
-                alert('Login successful!');
-                // Set login state in localStorage
-                localStorage.setItem('isLoggedIn', 'true');
-                // Redirect to index page after successful login
-                window.location.href = "index.html";
+                document.getElementById('passwordValidation').style.display = 'block'; // Show the validation box
             }
         }
+
+        function submitLoginDetails() {
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+    var errorMessage = '';
+
+    // Check if email is empty
+    if (!email) {
+        errorMessage += 'Please enter your email.\n';
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        errorMessage += 'Please enter a valid email address.\n';
+    }
+
+    // Check if password is empty
+    if (!password) {
+        errorMessage += 'Please enter your password.\n';
+    } else if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,12}$/.test(password)) {
+        errorMessage += 'Password must be 8-12 characters long, include at least one uppercase letter, one lowercase letter, one number, and one special character.\n';
+    }
+
+    // Display error messages or proceed with login
+    if (errorMessage) {
+        alert(errorMessage.trim());
+    } else {
+        // Assuming login is successful after validation
+        alert('Login successful!');
+        // Set login state in localStorage
+        localStorage.setItem('isLoggedIn', 'true');
+
+        // Get redirect URL from query parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const redirectUrl = urlParams.get('redirect') || 'index.html';
+
+        // Redirect to the appropriate page
+        window.location.href = redirectUrl;
+    }
+}
+
     </script>
 </body>
 </html>
