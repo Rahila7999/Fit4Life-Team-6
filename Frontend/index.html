@@ -275,8 +275,8 @@
             const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
             const authButton = document.getElementById('authButton');
             const dashboardLink = document.querySelector('.nav-item.nav-link[href="Dashboard/index.html"]');
-            const registerButton = document.querySelector('a[href="/Frontend/signup.html"]');
-            const contactButton = document.querySelector('a[href="/Frontend/contact.html"]');
+            const registerButtons = document.querySelectorAll('a[href="/Frontend/signup.html"]');
+            const contactButtons = document.querySelectorAll('a[href="/Frontend/contact.html"]');
     
             if (authButton) {
                 if (isLoggedIn) {
@@ -301,22 +301,27 @@
                 console.error('Dashboard link not found');
             }
     
-            if (registerButton) {
-                registerButton.style.display = isLoggedIn ? 'none' : 'inline'; // Hide or show the register button
+            if (registerButtons.length) {
+                registerButtons.forEach(button => {
+                    button.style.display = isLoggedIn ? 'none' : 'inline'; // Hide or show the register button
+                });
             } else {
-                console.error('Register button not found');
+                console.error('Register buttons not found');
             }
     
-            if (contactButton) {
-                contactButton.style.display = isLoggedIn ? 'none' : 'inline'; // Hide or show the contact button
+            if (contactButtons.length) {
+                contactButtons.forEach(button => {
+                    button.style.display = isLoggedIn ? 'none' : 'inline'; // Hide or show the contact button
+                });
             } else {
-                console.error('Contact button not found');
+                console.error('Contact buttons not found');
             }
         }
     
         // Run the function to check login state on page load
         document.addEventListener('DOMContentLoaded', checkLoginState);
     </script>
+    
     
 </body>
 
