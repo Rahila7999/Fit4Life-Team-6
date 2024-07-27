@@ -125,7 +125,7 @@
             <!-- Video containers -->
             <div class="video-container">
                 <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Chest%20Beginner/pushups.mp4" type="video/mp4">
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277434/Sadhana/Beginner%20Workout/Chest%20Beginner/widearmpushups.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <div class="video-overlay">Play Video</div>
@@ -133,7 +133,7 @@
 
             <div class="video-container">
                 <video autoplay muted controls loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665806/Chest%20Beginner/benchpress.mp4" type="video/mp4">
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277431/Sadhana/Beginner%20Workout/Chest%20Beginner/pushups.mp4" type="video/mp4">
                     Your browser does not support the video.
                 </video>
                 <div class="video-overlay">Play Video</div>
@@ -141,7 +141,15 @@
 
             <div class="video-container">
                 <video autoplay muted controls loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665809/Chest%20Beginner/chestfly.mp4" type="video/mp4">
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277430/Sadhana/Beginner%20Workout/Chest%20Beginner/kneepushups.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277426/Sadhana/Beginner%20Workout/Chest%20Beginner/d5ynephk7vjtzpzkae0o.mp4" type="video/mp4">
                     Your browser does not support the video.
                 </video>
                 <div class="video-overlay">Play Video</div>
@@ -162,7 +170,7 @@
             <!-- Video containers -->
             <div class="video-container">
                 <video autoplay muted loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Arm%20Beginner/bicepcurls.mp4" type="video/mp4">
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277464/Sadhana/Beginner%20Workout/Arm%20Beginner/inchworms.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <div class="video-overlay">Play Video</div>
@@ -170,7 +178,7 @@
 
             <div class="video-container">
                 <video autoplay muted controls loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665806/Arm%20Beginner/tricepdips.mp4" type="video/mp4">
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277464/Sadhana/Beginner%20Workout/Arm%20Beginner/punches.mp4" type="video/mp4">
                     Your browser does not support the video.
                 </video>
                 <div class="video-overlay">Play Video</div>
@@ -178,7 +186,15 @@
 
             <div class="video-container">
                 <video autoplay muted controls loop>
-                    <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665809/Arm%20Beginner/hammercurls.mp4" type="video/mp4">
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277466/Sadhana/Beginner%20Workout/Arm%20Beginner/sidearmraise.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277468/Sadhana/Beginner%20Workout/Arm%20Beginner/tricepsstretchleft.mp4" type="video/mp4">
                     Your browser does not support the video.
                 </video>
                 <div class="video-overlay">Play Video</div>
@@ -197,11 +213,11 @@
         <!-------------------------- Intermediate Workout Section Start ------------------------------->
         <div id="intermediate-workout" class="workout-container">
             <h3 class="text-center mb-4">Intermediate</h3>
-            <div class="video-section">
+                       <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665769/Abs%20Intermediate/jumpingjacks.mp4" type="video/mp4">
+             <div class="video-section">
                 <h4>Abs Intermediate (25min . 16 workouts)</h4>
                 <div class="video-container">
                     <video autoplay muted loop>
-                        <source src="https://res.cloudinary.com/divvbxdlu/video/upload/v1717665769/Abs%20Intermediate/jumpingjacks.mp4" type="video/mp4">
                         Your browser does not support the video.
                     </video>
                     <div class="video-overlay">Play Video</div>
@@ -408,7 +424,14 @@
         </div>
     </div>
 <!-- Footer End -->
-
+<!-- Modal for login prompt -->
+<div id="loginPromptModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Please log in to access the videos.</p>
+        <button id="loginNowBtn" class="btn btn-primary">Login Now</button>
+    </div>
+</div>
 
 <!-- Back to Top -->
 <a href="#" class="btn btn-dark py-3 fs-4 back-to-top"><i class="bi bi-arrow-up"></i></a>
@@ -419,31 +442,28 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script>
-        document.getElementById('beginner-btn').addEventListener('click', function() {
-            setActiveSection('beginner');
+    document.getElementById('beginner-btn').addEventListener('click', function() {
+        setActiveSection('beginner');
+    });
+    document.getElementById('intermediate-btn').addEventListener('click', function() {
+        setActiveSection('intermediate');
+    });
+    document.getElementById('advanced-btn').addEventListener('click', function() {
+        setActiveSection('advanced');
+    });
+    
+    function setActiveSection(level) {
+        document.querySelectorAll('.section-selector button').forEach(function(btn) {
+            btn.classList.remove('active');
         });
-        document.getElementById('intermediate-btn').addEventListener('click', function() {
-            setActiveSection('intermediate');
+        document.querySelectorAll('.workout-container').forEach(function(container) {
+            container.classList.remove('active');
         });
-        document.getElementById('advanced-btn').addEventListener('click', function() {
-            setActiveSection('advanced');
-        });
-
-        function setActiveSection(level) {
-            document.querySelectorAll('.section-selector button').forEach(function(btn) {
-                btn.classList.remove('active');
-            });
-            document.querySelectorAll('.workout-container').forEach(function(container) {
-                container.classList.remove('active');
-            });
-            document.getElementById(level + '-btn').classList.add('active');
-            document.getElementById(level + '-workout').classList.add('active');
-        }
-        function readMore(title, type) {
-    console.log(`Redirecting to video.html with title=${title} and type=${type}`);
-    window.location.href = `video.html?title=${encodeURIComponent(title)}&type=${encodeURIComponent(type)}`;
-}
-function checkLoginState() {
+        document.getElementById(level + '-btn').classList.add('active');
+        document.getElementById(level + '-workout').classList.add('active');
+    }
+    
+    function checkLoginState() {
         const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
         const authButton = document.getElementById('authButton');
         const dashboardLink = document.querySelector('.nav-item.nav-link[href="Dashboard/index.html"]');
@@ -468,8 +488,47 @@ function checkLoginState() {
         }
     }
     
-    // Run the function to check login state on page load
     document.addEventListener('DOMContentLoaded', checkLoginState);
+    
+    function readMore(title, type) {
+        const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+        if (isLoggedIn) {
+            console.log(`Redirecting to video.html with title=${title} and type=${type}`);
+            window.location.href = `video.html?title=${encodeURIComponent(title)}&type=${encodeURIComponent(type)}`;
+        } else {
+            // Set data attributes for the login button
+            const loginNowBtn = document.getElementById('loginNowBtn');
+            loginNowBtn.setAttribute('data-title', title);
+            loginNowBtn.setAttribute('data-type', type);
+            // Show login prompt modal
+            document.getElementById('loginPromptModal').style.display = 'block';
+        }
+    }
+    
+    // Modal functionality
+    const modal = document.getElementById('loginPromptModal');
+    const closeModal = document.getElementsByClassName('close')[0];
+    const loginNowBtn = document.getElementById('loginNowBtn');
+    
+    closeModal.onclick = function() {
+        modal.style.display = 'none';
+    }
+    
+    loginNowBtn.onclick = function() {
+    const title = encodeURIComponent(loginNowBtn.getAttribute('data-title'));
+    const type = encodeURIComponent(loginNowBtn.getAttribute('data-type'));
+    // Construct the URL correctly
+    const redirectUrl = `video.html?title=${title}&type=${type}`;
+    // Redirect to login page with the redirect URL as a parameter
+    window.location.href = `login.html?redirect=${encodeURIComponent(redirectUrl)}`;
+}
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+    
 </script>
 </body>
 </html>
