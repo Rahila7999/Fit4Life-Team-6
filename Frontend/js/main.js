@@ -56,6 +56,19 @@
         document.getElementById('dynamic-img-3').src = getRandomImage();
     
 
+        // card animation code
+    document.addEventListener('scroll', function() {
+        const cards = document.querySelectorAll('.card');
+        const viewportHeight = window.innerHeight;
+        cards.forEach((card, index) => {
+            const cardTop = card.getBoundingClientRect().top;
+            if (cardTop < viewportHeight - 100) {
+                card.classList.add('visible');
+            } else {
+                card.classList.remove('visible');
+            }
+        });
+    });
     // Facts counter
     $('[data-toggle="counter-up"]').counterUp({
         delay: 10,
