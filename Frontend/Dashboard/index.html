@@ -7,9 +7,9 @@
 
 		<!-- Site favicon -->
 		<link
-			rel="apple-touch-icon"
+			rel="logo icon"
 			sizes="180x180"
-			href="vendors/images/apple-touch-icon.png"
+			href="https://res.cloudinary.com/deup6t83x/image/upload/v1721236251/logo_pctu2u.png"
 		/>
 		<link
 			rel="icon"
@@ -256,7 +256,7 @@
 								><span class="mtext">Calendar</span>
 							</a>
 						</li>
-						<li class="dropdown">
+						<!-- <li class="dropdown">
 							<a href="javascript:;" class="dropdown-toggle">
 								<span class="micon bi bi-pie-chart"></span
 								><span class="mtext">Charts</span>
@@ -265,7 +265,7 @@
 								<li><a href="highchart.html">Highchart</a></li>
 								<li><a href="apexcharts.html">Apexcharts</a></li>
 							</ul>
-						</li>
+						</li> -->
 
 						<li>
 							<a href="invoice.html" class="dropdown-toggle no-arrow">
@@ -370,14 +370,16 @@
 				</div>
 				<div class="row">
 					<div class="col-xl-8 mb-30">
-						<div class="card-box height-100-p pd-20">
-							<h2 class="h4 mb-20">Activity</h2>
-							<div id="chart5"></div>
+						<div class="card-box height-100-p pd-10">
+							<!-- <h2 class="h4 mb-10">Activity</h2> -->
+							<!-- <div id="chartContainer"></div> -->
+							<div id="chartContainer" style="height: 370px; width: 100%;"></div>
 						</div>
+						
 					</div>
 					<div class="col-xl-4 mb-30">
 						<div class="card-box height-100-p pd-20">
-							<h2 class="h4 mb-20">Lead Target</h2>
+							<h2 class="h4 mb-20">Activity</h2>
 							<div id="chart6"></div>
 						</div>
 					</div>
@@ -621,6 +623,8 @@
 		
 		<!-- js -->
 		<script src="vendors/scripts/core.js"></script>
+		<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+		<script src="/Frontend/Dashboard/vendors/scripts/charts.js"></script>
 		<script src="vendors/scripts/script.min.js"></script>
 		<script src="vendors/scripts/process.js"></script>
 		<script src="vendors/scripts/layout-settings.js"></script>
@@ -665,6 +669,7 @@
 			// Run the function to check login state on page load
 			document.addEventListener('DOMContentLoaded', checkLoginState);
 		</script>
+		
 		
 	</body>
 </html>
