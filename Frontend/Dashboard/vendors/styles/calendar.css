@@ -1,0 +1,73 @@
+/* Calendar CSS */
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.calendar-header {
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #ff7300;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.calendar-day {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+
+.calendar-day.highlight {
+    background-color: green;
+    color: #fff;
+}
+
+.calendar-day.missed {
+    background-color: red;
+    color: #fff;
+}
+
+.calendar-day.workout-day {
+    border: 2px solid #ff7300;
+    background-color: green;
+    color:#fff;
+}
+
+.calendar-day.empty {
+    visibility: hidden;
+}
+
+/* Workout Summary Table CSS */
+.table {
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.table th {
+    background-color: #ff7300;
+    color: #fff;
+    text-align: center;
+}
+
+.table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+h3 {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #333;
+}

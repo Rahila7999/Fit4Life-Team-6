@@ -141,3 +141,67 @@ document.addEventListener('DOMContentLoaded', () => {
     populateSidebar(videoType);
     handleTabSwitching();
 });
+
+//History Page
+document.addEventListener('DOMContentLoaded', function () {
+    const startButton = document.getElementById('start-button');
+    const animationVideo = document.getElementById('animation-video');
+    const musclesVideo = document.getElementById('muscles-video');
+    let videoStartTime = null;
+    let isPlaying = false; // Track if video is currently playing
+
+   startButton.addEventListener('click', function () {
+    let currentVideo = getCurrentVideo();
+
+    if (isPlaying) {
+        // Stop the video and tracking
+        if (currentVideo) {
+            currentVideo.pause();
+            const endTime = new Date();
+            const duration = (endTime - videoStartTime) / 1000; // duration in seconds
+            saveWorkoutHistory(document.getElementById('video-title').textContent, duration);
+            startButton.textContent = 'Start';
+            isPlaying = false;
+            currentVideo.classList.remove('hide-controls');
+        }
+    } else {
+        // Start the video and tracking
+        if (currentVideo) {
+            currentVideo.style.display = 'block'; // Ensure the video is visible
+            currentVideo.play().catch(error => {
+                console.error('Error playing video:', error);
+            });
+            videoStartTime = new Date();
+            startButton.textContent = 'Stop';
+            isPlaying = true;
+            currentVideo.classList.add('hide-controls');
+        }
+    }
+});
+
+
+    function getCurrentVideo() {
+        return animationVideo.style.display === 'block' ? animationVideo : musclesVideo;
+    }
+    
+    function saveWorkoutHistory(videoTitle, duration) {
+        let videoHistory = JSON.parse(localStorage.getItem('videoHistory')) || {};
+        const today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
+    
+        if (!videoHistory[today]) {
+            videoHistory[today] = [];
+        }
+    
+        const existingEntry = videoHistory[today].find(video => video.name === videoTitle);
+    
+        if (existingEntry) {
+            existingEntry.duration += duration;
+        } else {
+            videoHistory[today].push({ name: videoTitle, duration });
+        }
+    
+        localStorage.setItem('videoHistory', JSON.stringify(videoHistory));
+    }
+    
+});
+console.log(localStorage.getItem('videoHistory'));
