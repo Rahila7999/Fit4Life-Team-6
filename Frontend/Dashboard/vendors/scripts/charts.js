@@ -4,7 +4,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	theme: "light1", // "light2", "dark1", "dark2"
 	animationEnabled: true, // change to true		
 	title:{
-		text: "Attandance Chart"
+		text: "Attendance Chart"
 	},
 	axisY: {
 		maximum: 31 // Set the maximum value of the y-axis to 31
