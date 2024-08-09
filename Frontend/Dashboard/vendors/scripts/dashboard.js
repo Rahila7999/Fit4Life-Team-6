@@ -438,7 +438,7 @@ var options6 = {
 	stroke: {
 	  dashArray: 4
 	},
-	labels: ['Achieve Goals'],
+	labels: ['Complete Activity'],
 };
 
 var chart = new ApexCharts(document.querySelector("#chart"), options);
