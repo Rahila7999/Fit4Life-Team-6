@@ -1,3 +1,5 @@
+
+//Abs chart
 var options = {
 	series: [80],
 	grid: {
@@ -68,6 +70,8 @@ var options = {
 	}
 };
 
+
+//Legs Chart
 var options2 = {
 	series: [70],
 	grid: {
@@ -138,6 +142,8 @@ var options2 = {
 	}
 };
 
+
+//Arms Chart
 var options3 = {
 	series: [75],
 	grid: {
@@ -208,6 +214,8 @@ var options3 = {
 	}
 };
 
+
+//Shoulder Chart
 var options4 = {
 	series: [85],
 	grid: {
@@ -278,103 +286,115 @@ var options4 = {
 	}
 };
 
+
+//Attendance Chart
 var options5 = {
-	chart: {
-		height: 350,
-		type: 'bar',
-		parentHeightOffset: 0,
-		fontFamily: 'Poppins, sans-serif',
-		toolbar: {
-			show: false,
-		},
-	},
-	colors: ['#1b00ff', '#f56767'],
-	grid: {
-		borderColor: '#c7d2dd',
-		strokeDashArray: 5,
-	},
-	plotOptions: {
-		bar: {
-			horizontal: false,
-			columnWidth: '25%',
-			endingShape: 'rounded'
-		},
-	},
-	dataLabels: {
-		enabled: false
-	},
-	stroke: {
-		show: true,
-		width: 2,
-		colors: ['transparent']
-	},
-	series: [{
-		name: 'In Progress',
-		data: [40, 28, 47, 22, 34, 25]
-	}, {
-		name: 'Complete',
-		data: [30, 20, 37, 10, 28, 11]
-	}],
-	xaxis: {
-		categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-		labels: {
-			style: {
-				colors: ['#353535'],
-				fontSize: '16px',
-			},
-		},
-		axisBorder: {
-			color: '#8fa6bc',
-		}
-	},
-	yaxis: {
-		title: {
-			text: ''
-		},
-		labels: {
-			style: {
-				colors: '#353535',
-				fontSize: '16px',
-			},
-		},
-		axisBorder: {
-			color: '#f00',
-		}
-	},
-	legend: {
-		horizontalAlign: 'right',
-		position: 'top',
-		fontSize: '16px',
-		offsetY: 0,
-		labels: {
-			colors: '#353535',
-		},
-		markers: {
-			width: 10,
-			height: 10,
-			radius: 15,
-		},
-		itemMargin: {
-			vertical: 0
-		},
-	},
-	fill: {
-		opacity: 1
+    chart: {
+        height: 350,
+        type: 'bar',
+        parentHeightOffset: 0,
+        fontFamily: 'Poppins, sans-serif',
+        toolbar: {
+            show: false,
+        },
+    },
+    colors: ['#00E396', '#FF4560'], // Green for 'Present', Red for 'Absent'
+    grid: {
+        borderColor: '#c7d2dd',
+        strokeDashArray: 5,
+    },
+    plotOptions: {
+        bar: {
+            horizontal: false,
+            columnWidth: '40%', // Adjust width to provide spacing
+            endingShape: 'rounded',
+            distributed: false, // Remove distribution to ensure consistent colors per series
+        },
+    },
+    dataLabels: {
+        enabled: false
+    },
+    stroke: {
+        show: true,
+        width: 2,
+        colors: ['transparent']
+    },
+    series: [{
+        name: 'Present', // Green color
+        data: [20, 15, 25, 10, 18, 12, 22, 14, 20, 15, 18, 13] // Example data for 'Present'
+    }, {
+        name: 'Absent', // Red color
+        data: [10, 5, 12, 8, 15, 6, 10, 7, 12, 5, 8, 6] // Example data for 'Absent'
+    }],
+    xaxis: {
+        categories: [
+            'Jan', 'Feb', 'Mar', 'Apr',
+            'May', 'Jun', 'Jul', 'Aug',
+            'Sep', 'Oct', 'Nov', 'Dec'
+        ],
+        labels: {
+            style: {
+                colors: '#353535',
+                fontSize: '14px', // Adjust font size for readability
+                fontFamily: 'Poppins, sans-serif'
+            },
+        },
+        axisBorder: {
+            color: '#8fa6bc',
+        },
+        tickPlacement: 'between', // Ensure categories are placed between bars
+    },
+    yaxis: {
+        title: {
+            text: ''
+        },
+        labels: {
+            style: {
+                colors: '#353535',
+                fontSize: '16px',
+            },
+        },
+        axisBorder: {
+            color: '#f00',
+        },
+        max: 31, // Set the maximum value of the y-axis to 31
+        tickAmount: 5 // Adjust tick marks if needed
+    },
+    legend: {
+        horizontalAlign: 'right',
+        position: 'top',
+        fontSize: '16px',
+        offsetY: 0,
+        labels: {
+            colors: '#353535',
+        },
+        markers: {
+            width: 10,
+            height: 10,
+            radius: 15,
+        },
+        itemMargin: {
+            vertical: 0
+        },
+    },
+    fill: {
+        opacity: 1
+    },
+    tooltip: {
+        style: {
+            fontSize: '15px',
+            fontFamily: 'Poppins, sans-serif',
+        },
+        y: {
+            formatter: function (val) {
+                return val
+            }
+        }
+    }
+};
 
-	},
-	tooltip: {
-		style: {
-			fontSize: '15px',
-			fontFamily: 'Poppins, sans-serif',
-		},
-		y: {
-			formatter: function (val) {
-				return val
-			}
-		}
-	}
-}
 
+//Activity Chart
 var options6 = {
 	series: [73],
 	chart: {
