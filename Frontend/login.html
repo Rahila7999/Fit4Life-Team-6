@@ -4,23 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link
-      rel="icon"
-      href="https://res.cloudinary.com/deup6t83x/image/upload/v1721236251/logo_pctu2u.png"
-      type="image/x-icon"
-    />
+    <link rel="icon" href="https://res.cloudinary.com/deup6t83x/image/upload/v1721236251/logo_pctu2u.png" type="image/x-icon">
     <link rel="stylesheet" href="css/login.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <div class="container">
+        <div class="close-button" onclick="redirectToIndex()">×</div>
         <div class="login-link">
             <div class="logo">
-                <i class='bx bx-pencilf'></i>
+                <i class='bx bx-pencil'></i>
                 <span class="text">Fit4Life</span>
             </div>
             <p class="side-big-hedaing">Create your Account</p>
-            <p class="primary-bg-text">To keep track on your dashboard please login with your personal info.</p>
+            <p class="primary-bg-text">To keep track of your dashboard, please login with your personal info.</p>
             <a href="signup.html" class="loginbtn">Register now</a>
         </div>
         <form id="loginForm" class="signup-form-container">
@@ -33,16 +30,12 @@
                 </div>
                 <div class="text-fields password">
                     <label for="password"><i class='bx bx-lock-alt'></i></label>
-                    <input type="password" name="password" id="password" placeholder="Enter password" oninput="validatePassword()" onfocus="showPasswordValidation()" onblur="hidePasswordValidation()">
-                    <div id="passwordValidation" class="password-validation">
-                        <p id="length" class="invalid">At least 8 characters</p>
-                        <p id="uppercase" class="invalid">At least one uppercase letter</p>
-                        <p id="lowercase" class="invalid">At least one lowercase letter</p>
-                        <p id="number" class="invalid">At least one number</p>
-                        <p id="specialChar" class="invalid">At least one special character</p>
-                    </div>
+                    <input type="password" name="password" id="password" placeholder="Enter password">
+                    <i class='bx bx-hide password-toggle' id="togglePassword"></i>
                 </div>
-                <a href="/Frontend/forgot.html" class="forgot-password">Forgot Password?</a>
+                <center
+                ><a href="forgot.html" class="forgot-password">Forgot Password?</a></center>
+                
                 <br>
             </div>
             <input type="button" value="Login" onclick="submitLoginDetails()" class="nextPage">
@@ -51,77 +44,50 @@
 
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script>
-        function showPasswordValidation() {
-            document.getElementById('passwordValidation').style.display = 'block';
-        }
+        // Toggle password visibility
+        const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#password');
+    
+        togglePassword.addEventListener('click', function () {
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            this.classList.toggle('bx-show');
+            this.classList.toggle('bx-hide');
+        });
 
-        function hidePasswordValidation() {
-            var password = document.getElementById('password').value;
-            if (!password) {
-                document.getElementById('passwordValidation').style.display = 'none';
-            }
-        }
-
-        function validatePassword() {
-            var password = document.getElementById('password').value;
-
-            var uppercase = /[A-Z]/.test(password);
-            var lowercase = /[a-z]/.test(password);
-            var number = /\d/.test(password);
-            var specialChar = /[@$!%*?&]/.test(password);
-            var length = password.length >= 8 && password.length <= 12;
-
-            document.getElementById('uppercase').className = uppercase ? 'valid' : 'invalid';
-            document.getElementById('lowercase').className = lowercase ? 'valid' : 'invalid';
-            document.getElementById('number').className = number ? 'valid' : 'invalid';
-            document.getElementById('specialChar').className = specialChar ? 'valid' : 'invalid';
-            document.getElementById('length').className = length ? 'valid' : 'invalid';
-
-            // Check if all validations are met
-            if (uppercase && lowercase && number && specialChar && length) {
-                document.getElementById('passwordValidation').style.display = 'none'; // Hide the validation box
-            } else {
-                document.getElementById('passwordValidation').style.display = 'block'; // Show the validation box
-            }
-        }
-
+        // Login form functionality
         function submitLoginDetails() {
-    var email = document.getElementById('email').value;
-    var password = document.getElementById('password').value;
-    var errorMessage = '';
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            let errorMessage = '';
 
-    // Check if email is empty
-    if (!email) {
-        errorMessage += 'Please enter your email.\n';
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        errorMessage += 'Please enter a valid email address.\n';
-    }
+            if (!email) {
+                errorMessage += 'Please enter your email.\n';
+            } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                errorMessage += 'Please enter a valid email address.\n';
+            }
 
-    // Check if password is empty
-    if (!password) {
-        errorMessage += 'Please enter your password.\n';
-    } else if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,12}$/.test(password)) {
-        errorMessage += 'Password must be 8-12 characters long, include at least one uppercase letter, one lowercase letter, one number, and one special character.\n';
-    }
+            if (!password) {
+                errorMessage += 'Please enter your password.\n';
+            } else if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,12}$/.test(password)) {
+                errorMessage += 'Password must be 8-12 characters long, include at least one uppercase letter, one lowercase letter, one number, and one special character.\n';
+            }
 
-    // Display error messages or proceed with login
-    if (errorMessage) {
-        alert(errorMessage.trim());
-    } else {
-        // Assuming login is successful after validation
-        alert('Login successful!');
-        // Set login state in localStorage
-        localStorage.setItem('isLoggedIn', 'true');
+            if (errorMessage) {
+                alert(errorMessage.trim());
+            } else {
+                alert('Login successful!');
+                localStorage.setItem('isLoggedIn', 'true');
+                const urlParams = new URLSearchParams(window.location.search);
+                const redirectUrl = urlParams.get('redirect') || 'index.html';
+                window.location.href = redirectUrl;
+            }
+        }
 
-        // Get redirect URL from query parameters
-        const urlParams = new URLSearchParams(window.location.search);
-        const redirectUrl = urlParams.get('redirect') || 'index.html';
-
-        // Redirect to the appropriate page
-        window.location.href = redirectUrl;
-    }
-}
-
+        // Function to redirect to index.html
+        function redirectToIndex() {
+            window.location.href = 'index.html';
+        }
     </script>
 </body>
 </html>
