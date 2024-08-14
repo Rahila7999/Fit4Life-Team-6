@@ -27,7 +27,16 @@
     padding: 20px;
     background-color: #f9f9f9;
 }
-
+#intermediate-workout {
+    position: relative;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+#advanced-workout {
+    position: relative;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
 .workout-container {
     display: none;
 }
@@ -36,7 +45,7 @@
     display: block;
 }
 /* Styling for h3 with background */
-h3 {
+.workout-container  h3 {
     font-size: 1.5rem;
     font-weight: bold;
     color: #fff; /* White text color */
@@ -49,7 +58,7 @@ h3 {
 }
 
 /* Styling for h4 with border */
-h4 {
+.workout-container  h4 {
     font-size: 1.25rem;
     font-weight: normal;
     color: #333;
@@ -61,12 +70,12 @@ h4 {
 }
 
 /* Hover effects */
-h3:hover {
+.workout-container h3:hover {
     background-color: #ff5722; /* Change background color on hover */
     color: #fff; /* Ensure text remains readable */
 }
 
-h4:hover {
+.workout-container h4:hover {
     border-color: #ff5722; /* Change border color on hover */
     color: #ff5722; /* Change text color on hover */
 }
@@ -240,15 +249,7 @@ h4:hover {
     width: 100%;   
     height: 400px; 
 }
-.videofooter {
-    background-color: #111;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}.instructions {
+.instructions {
     padding: 20px;
     background-color: #f9f9f9; /* Light background color */
 }
@@ -312,12 +313,31 @@ h4:hover {
     text-decoration: none;
     cursor: pointer;
 }
+#timer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+#timer {
+    font-size: 20px;
+    color: #333;
+    margin-right: 20px; /* Space between timer and button */
+    width: 80px;  /* Adjust the width for the circle */
+    height: 80px; /* Adjust the height for the circle */
+    border-radius: 50%; /* Make it a circle */
+    border: 5px solid #ff7300; /* Border color matching your theme */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff; /* Background inside the circle */
+}
+
 button.start {
     display: block;
     width: 150px;
     padding: 10px;
-    margin: 3px 0 3px 530px;
-    background-color: #007bff;
+    background-color: #888;
     color: white;
     border: none;
     border-radius: 5px;
@@ -327,9 +347,5 @@ button.start {
 }
 
 button.start:hover {
-    background-color: #0056b3;
+    background-color: #ff7300;
 }
-
-
-
-

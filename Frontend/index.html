@@ -230,6 +230,7 @@
             </div>
         </div>
     </div>
+    </footer>
     <!-- Footer End -->
 
 
@@ -247,58 +248,58 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script>
-        function checkLoginState() {
-            const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-            const authButton = document.getElementById('authButton');
-            const dashboardLink = document.querySelector('.nav-item.nav-link[href="Dashboard/index.html"]');
-            const registerButtons = document.querySelectorAll('a[href="/Frontend/signup.html"]');
-            const contactButtons = document.querySelectorAll('a[href="/Frontend/contact.html"]');
+    function checkLoginState() {
+        const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+        const authButton = document.getElementById('authButton');
+        const dashboardLink = document.querySelector('.nav-item.nav-link[href="Dashboard/index.html"]');
+        const registerButtons = document.querySelectorAll('a[href="/Frontend/signup.html"]');
+        const contactButtons = document.querySelectorAll('a[href="/Frontend/contact.html"]');
     
-            if (authButton) {
-                if (isLoggedIn) {
-                    authButton.textContent = 'Logout';
-                    authButton.onclick = function() {
-                        localStorage.removeItem('isLoggedIn');
-                        window.location.href = "index.html";
-                    };
-                } else {
-                    authButton.textContent = 'Login';
-                    authButton.onclick = function() {
-                        window.location.href = "login.html";
-                    };
-                }
+        if (authButton) {
+            if (isLoggedIn) {
+                authButton.textContent = 'Logout';
+                authButton.onclick = function() {
+                    localStorage.removeItem('isLoggedIn');
+                    window.location.href = "index.html";
+                };
             } else {
-                console.error('Auth button not found');
+                authButton.textContent = 'Login';
+                authButton.onclick = function() {
+                    window.location.href = "login.html";
+                };
             }
-    
-            if (dashboardLink) {
-                dashboardLink.style.display = isLoggedIn ? 'inline' : 'none'; // Show or hide the dashboard link
-            } else {
-                console.error('Dashboard link not found');
-            }
-    
-            if (registerButtons.length) {
-                registerButtons.forEach(button => {
-                    button.style.display = isLoggedIn ? 'none' : 'inline'; // Hide or show the register button
-                });
-            } else {
-                console.error('Register buttons not found');
-            }
-    
-            if (contactButtons.length) {
-                contactButtons.forEach(button => {
-                    button.style.display = isLoggedIn ? 'none' : 'inline'; // Hide or show the contact button
-                });
-            } else {
-                console.error('Contact buttons not found');
-            }
+        } else {
+            console.error('Auth button not found');
         }
     
-        // Run the function to check login state on page load
-        document.addEventListener('DOMContentLoaded', checkLoginState);
-    </script>
+        if (dashboardLink) {
+            dashboardLink.style.display = isLoggedIn ? 'inline' : 'none'; // Show or hide the dashboard link
+        } else {
+            console.error('Dashboard link not found');
+        }
     
+        // Hiding or showing the register buttons based on login state
+        registerButtons.forEach(button => {
+            if (button) {
+                button.style.display = isLoggedIn ? 'none' : 'inline';
+            } else {
+                console.error('Register button not found');
+            }
+        });
+    
+        // Hiding or showing the contact buttons based on login state
+        contactButtons.forEach(button => {
+            if (button) {
+                button.style.display = isLoggedIn ? 'none' : 'inline';
+            } else {
+                console.error('Contact button not found');
+            }
+        });
+    }
+    
+    // Run the function to check login state on page load
+    document.addEventListener('DOMContentLoaded', checkLoginState);
+</script>        
     
 </body>
-
 </html>

@@ -95,6 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Default video data
     const defaultVideos = {
+        //Beginner Workout Default videos Fields------------
         'abs-beginner': {
             name: "Jumping Jacks",
             animationSrc: "https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/jumpingjacks.mp4",
@@ -115,8 +116,93 @@ document.addEventListener('DOMContentLoaded', () => {
             musclesSrc: "https://example.com/arm-beginner/bicepcurls-muscles.mp4",
             howToDoSrc: "https://example.com/arm-beginner/bicepcurls-howtodo.mp4",
             instructions: "Bicep Curls target your biceps. Hold weights in your hands and curl them towards your shoulders."
+        },
+        'leg-beginner': {
+            name: "Bicep Curls",
+            animationSrc: "https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Arm%20Beginner/bicepcurls.mp4",
+            musclesSrc: "https://example.com/arm-beginner/bicepcurls-muscles.mp4",
+            howToDoSrc: "https://example.com/arm-beginner/bicepcurls-howtodo.mp4",
+            instructions: "Bicep Curls target your biceps. Hold weights in your hands and curl them towards your shoulders."
+        },
+        'back-beginner': {
+            name: "Bicep Curls",
+            animationSrc: "https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Arm%20Beginner/bicepcurls.mp4",
+            musclesSrc: "https://example.com/arm-beginner/bicepcurls-muscles.mp4",
+            howToDoSrc: "https://example.com/arm-beginner/bicepcurls-howtodo.mp4",
+            instructions: "Bicep Curls target your biceps. Hold weights in your hands and curl them towards your shoulders."
+        },
+        //Intermediate Workout Default videos Fields------------
+        'abs-intermediate': {
+            name: "Jumping Jacks",
+            animationSrc: "https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/jumpingjacks.mp4",
+            musclesSrc: "https://example.com/abs-beginner/jumpingjacks-muscles.mp4",
+            howToDoSrc: "https://www.youtube.com/embed/2W4ZNSwoW_4?si=I6Jaz4Zp4IBb0sqA",
+            instructions: ["Start with your feet together and your arms by your sides, then jump up with your feet apart and your hands overhead.<br> Return to the start position then do the next rep. This exercise provides a full-body workout and works all your large muscle groups.", "Instruction for heading 2 of Jumping Jacks.", "Instruction for heading 3 of Jumping Jacks.", "Instruction for heading 4 of Jumping Jacks."]
+        },
+        'chest-intermediate': {
+            name: "Pushups",
+            animationSrc: "https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Chest%20Beginner/pushups.mp4",
+            musclesSrc: "https://example.com/chest-beginner/pushups-muscles.mp4",
+            howToDoSrc: "https://example.com/chest-beginner/pushups-howtodo.mp4",
+            instructions: "Push-Ups strengthen your chest and arms. Lower your body until your chest nearly touches the floor, then push back up."
+        },
+        'arm-intermediate': {
+            name: "Bicep Curls",
+            animationSrc: "https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Arm%20Beginner/bicepcurls.mp4",
+            musclesSrc: "https://example.com/arm-beginner/bicepcurls-muscles.mp4",
+            howToDoSrc: "https://example.com/arm-beginner/bicepcurls-howtodo.mp4",
+            instructions: "Bicep Curls target your biceps. Hold weights in your hands and curl them towards your shoulders."
+        },
+        'leg-intermediate': {
+            name: "Bicep Curls",
+            animationSrc: "https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Arm%20Beginner/bicepcurls.mp4",
+            musclesSrc: "https://example.com/arm-beginner/bicepcurls-muscles.mp4",
+            howToDoSrc: "https://example.com/arm-beginner/bicepcurls-howtodo.mp4",
+            instructions: "Bicep Curls target your biceps. Hold weights in your hands and curl them towards your shoulders."
+        },
+        'back-intermediate': {
+            name: "Bicep Curls",
+            animationSrc: "https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Arm%20Beginner/bicepcurls.mp4",
+            musclesSrc: "https://example.com/arm-beginner/bicepcurls-muscles.mp4",
+            howToDoSrc: "https://example.com/arm-beginner/bicepcurls-howtodo.mp4",
+            instructions: "Bicep Curls target your biceps. Hold weights in your hands and curl them towards your shoulders."
+        },
+        //Advanced Workout Default videos Fields------------
+        'abs-advanced': {
+            name: "Jumping Jacks",
+            animationSrc: "https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/jumpingjacks.mp4",
+            musclesSrc: "https://example.com/abs-beginner/jumpingjacks-muscles.mp4",
+            howToDoSrc: "https://www.youtube.com/embed/2W4ZNSwoW_4?si=I6Jaz4Zp4IBb0sqA",
+            instructions: ["Start with your feet together and your arms by your sides, then jump up with your feet apart and your hands overhead.<br> Return to the start position then do the next rep. This exercise provides a full-body workout and works all your large muscle groups.", "Instruction for heading 2 of Jumping Jacks.", "Instruction for heading 3 of Jumping Jacks.", "Instruction for heading 4 of Jumping Jacks."]
+        },
+        'chest-advanced': {
+            name: "Pushups",
+            animationSrc: "https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Chest%20Beginner/pushups.mp4",
+            musclesSrc: "https://example.com/chest-beginner/pushups-muscles.mp4",
+            howToDoSrc: "https://example.com/chest-beginner/pushups-howtodo.mp4",
+            instructions: "Push-Ups strengthen your chest and arms. Lower your body until your chest nearly touches the floor, then push back up."
+        },
+        'arm-advanced': {
+            name: "Bicep Curls",
+            animationSrc: "https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Arm%20Beginner/bicepcurls.mp4",
+            musclesSrc: "https://example.com/arm-beginner/bicepcurls-muscles.mp4",
+            howToDoSrc: "https://example.com/arm-beginner/bicepcurls-howtodo.mp4",
+            instructions: "Bicep Curls target your biceps. Hold weights in your hands and curl them towards your shoulders."
+        },
+        'leg-advanced': {
+            name: "Bicep Curls",
+            animationSrc: "https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Arm%20Beginner/bicepcurls.mp4",
+            musclesSrc: "https://example.com/arm-beginner/bicepcurls-muscles.mp4",
+            howToDoSrc: "https://example.com/arm-beginner/bicepcurls-howtodo.mp4",
+            instructions: "Bicep Curls target your biceps. Hold weights in your hands and curl them towards your shoulders."
+        },
+        'back-advanced': {
+            name: "Bicep Curls",
+            animationSrc: "https://res.cloudinary.com/divvbxdlu/video/upload/v1717665808/Arm%20Beginner/bicepcurls.mp4",
+            musclesSrc: "https://example.com/arm-beginner/bicepcurls-muscles.mp4",
+            howToDoSrc: "https://example.com/arm-beginner/bicepcurls-howtodo.mp4",
+            instructions: "Bicep Curls target your biceps. Hold weights in your hands and curl them towards your shoulders."
         }
-        // More default videos...
     };
 
     const selectedVideo = defaultVideos[videoType] || {};
@@ -141,67 +227,83 @@ document.addEventListener('DOMContentLoaded', () => {
     populateSidebar(videoType);
     handleTabSwitching();
 });
-
-//History Page
 document.addEventListener('DOMContentLoaded', function () {
     const startButton = document.getElementById('start-button');
     const animationVideo = document.getElementById('animation-video');
     const musclesVideo = document.getElementById('muscles-video');
+    const timerElement = document.getElementById('timer');
+    
     let videoStartTime = null;
-    let isPlaying = false; // Track if video is currently playing
+    let isPlaying = false;
+    let countdownInterval;
+    let timeElapsed = 0; // Start time at 0
 
-   startButton.addEventListener('click', function () {
-    let currentVideo = getCurrentVideo();
+    startButton.addEventListener('click', function () {
+        let currentVideo = getCurrentVideo();
 
-    if (isPlaying) {
-        // Stop the video and tracking
-        if (currentVideo) {
-            currentVideo.pause();
-            const endTime = new Date();
-            const duration = (endTime - videoStartTime) / 1000; // duration in seconds
-            saveWorkoutHistory(document.getElementById('video-title').textContent, duration);
-            startButton.textContent = 'Start';
-            isPlaying = false;
-            currentVideo.classList.remove('hide-controls');
+        if (isPlaying) {
+            // Stop the video, timer, and tracking
+            if (currentVideo) {
+                currentVideo.pause();
+                const endTime = new Date();
+                const duration = (endTime - videoStartTime) / 1000; // duration in seconds
+                saveWorkoutHistory(document.getElementById('video-title').textContent, duration);
+                startButton.textContent = 'Start';
+                isPlaying = false;
+                currentVideo.classList.remove('hide-controls');
+                clearInterval(countdownInterval); // Stop the timer
+            }
+        } else {
+            // Start the video, timer, and tracking
+            if (currentVideo) {
+                currentVideo.style.display = 'block'; // Ensure the video is visible
+                currentVideo.play().catch(error => {
+                    console.error('Error playing video:', error);
+                });
+                videoStartTime = new Date();
+                startButton.textContent = 'Stop';
+                isPlaying = true;
+                currentVideo.classList.add('hide-controls');
+                startTimer(); // Start the timer
+            }
         }
-    } else {
-        // Start the video and tracking
-        if (currentVideo) {
-            currentVideo.style.display = 'block'; // Ensure the video is visible
-            currentVideo.play().catch(error => {
-                console.error('Error playing video:', error);
-            });
-            videoStartTime = new Date();
-            startButton.textContent = 'Stop';
-            isPlaying = true;
-            currentVideo.classList.add('hide-controls');
-        }
-    }
-});
-
+    });
 
     function getCurrentVideo() {
         return animationVideo.style.display === 'block' ? animationVideo : musclesVideo;
     }
-    
+
     function saveWorkoutHistory(videoTitle, duration) {
         let videoHistory = JSON.parse(localStorage.getItem('videoHistory')) || {};
         const today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
-    
+
         if (!videoHistory[today]) {
             videoHistory[today] = [];
         }
-    
+
         const existingEntry = videoHistory[today].find(video => video.name === videoTitle);
-    
+
         if (existingEntry) {
             existingEntry.duration += duration;
         } else {
             videoHistory[today].push({ name: videoTitle, duration });
         }
-    
+
         localStorage.setItem('videoHistory', JSON.stringify(videoHistory));
     }
-    
+
+    function startTimer() {
+        clearInterval(countdownInterval); // Clear any previous interval
+
+        countdownInterval = setInterval(function () {
+            timeElapsed++;
+            updateTimerDisplay(timeElapsed);
+        }, 1000);
+    }
+
+    function updateTimerDisplay(time) {
+        const minutes = Math.floor(time / 60);
+        const seconds = time % 60;
+        timerElement.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    }
 });
-console.log(localStorage.getItem('videoHistory'));
