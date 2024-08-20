@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkOut</title>
+    <link
+      rel="icon"
+      href="https://res.cloudinary.com/deup6t83x/image/upload/v1721236251/logo_pctu2u.png"
+      type="image/x-icon"
+    />
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rubik&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rubik&display=swap" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/workout.css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Header Start -->
+    <div class="container-fluid bg-dark px-0">
+        <div class="row gx-0">
+            <div class="col-lg-3 bg-dark d-none d-lg-flex align-items-center justify-content-center">
+                <a href="/Frontend/index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                    <img src="https://res.cloudinary.com/dbzlzmrhc/image/upload/v1718185446/logo_gzw8mq.png" alt="Fit4Life Logo" class="img-fluid logo-img">
+                </a>
+            </div>
+            <div class="col-lg-9">
+                <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0 px-lg-5">
+                    <a href="/Frontend/index.html" class="navbar-brand d-block d-lg-none">
+                        <img src="https://res.cloudinary.com/dbzlzmrhc/image/upload/v1718185446/logo_gzw8mq.png" alt="Fit4Life Logo" class="img-fluid logo-img">
+                    </a>
+                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto py-0">
+                            <a href="index" class="nav-item nav-link ">Home</a>
+                            <a href="workout" class="nav-item nav-link active">Workout</a>
+                            <a href="Dashboard/index.html" class="nav-item nav-link">Dashboard</a>
+                            <a href="about" class="nav-item nav-link">About</a>
+                            <a href="contact" class="nav-item nav-link">Contact</a>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <button id="authButton" class="btn btn-primary py-md-1 px-md-3 d-none d-lg-block"></button>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Main Content Start -->
+    <div class="background-wrapper">
+    <div class="container mx-8 my-4">
+        <h2 class="text-center mb-4">Home Workout</h2>
+        <div class="section-selector">
+            <button id="beginner-btn" class="active">Beginner</button>
+            <button id="intermediate-btn">Intermediate</button>
+            <button id="advanced-btn">Advanced</button>
+        </div>
+
+        <!--------------------------Beginner Workout Section Start------------------------------>
+        <div id="beginner-workout" class="workout-container active">
+        <h3 class="text-center mb-4">Beginner</h3>
+        <!-- Abs Beginner Section Start -->
+         <div class="container my-5">
+        <h4>Abs Beginner (20mins . 16 workouts)</h4>
+
+        <div class="video-section">
+            <div class="video-container">
+                <video autoplay muted loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277272/Sadhana/Beginner%20Workout/Abs%20Beginner/russiantwist.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/abdonimalcrunches.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277269/Sadhana/Beginner%20Workout/Abs%20Beginner/mountainclimber.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+            <div class="read-more">
+                <button class="read-more-btn" onclick="readMore('Abs Beginner', 'abs-beginner')">Read More</button>
+            </div>
+        </div>
+        </div>
+     <!-- Abs Beginner Section End -->
+
+        <!-- Chest Beginner Section Start -->
+        <div class="container my-5">
+        <h4>Chest Beginner (7mins . 11 workouts)</h4>
+
+        <div class="video-section">
+            <div class="video-container">
+                <video autoplay muted loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277434/Sadhana/Beginner%20Workout/Chest%20Beginner/widearmpushups.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277431/Sadhana/Beginner%20Workout/Chest%20Beginner/pushups.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277430/Sadhana/Beginner%20Workout/Chest%20Beginner/kneepushups.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277426/Sadhana/Beginner%20Workout/Chest%20Beginner/d5ynephk7vjtzpzkae0o.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+            <div class="read-more">
+                <button class="read-more-btn" onclick="readMore('Chest Beginner', 'chest-beginner')">Read More</button>
+            </div>
+        </div>
+     </div>
+     <!-- Chest Beginner Section End -->
+
+     <!-- Arm Beginner Section Start -->
+     <div class="container my-5">
+        <h4>Arm Beginner (7mins . 11 workouts)</h4>
+
+        <div class="video-section">
+            <div class="video-container">
+                <video autoplay muted loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277464/Sadhana/Beginner%20Workout/Arm%20Beginner/inchworms.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277464/Sadhana/Beginner%20Workout/Arm%20Beginner/punches.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277466/Sadhana/Beginner%20Workout/Arm%20Beginner/sidearmraise.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277468/Sadhana/Beginner%20Workout/Arm%20Beginner/tricepsstretchleft.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+            <div class="read-more">
+                <button class="read-more-btn" onclick="readMore('Arm Beginner', 'arm-beginner')">Read More</button>
+            </div>
+        </div>
+        </div>
+     <!-- Arm Beginner  Section End -->
+
+       <!-- Leg Beginner Section Start -->
+     <div class="container my-5">
+        <h4>Leg Beginner (26mins . 23 workouts)</h4>
+
+        <div class="video-section">
+            <div class="video-container">
+                <video autoplay muted loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277383/Sadhana/Beginner%20Workout/Leg%20Beginner/sidehop.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277382/Sadhana/Beginner%20Workout/Leg%20Beginner/squats.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277374/Sadhana/Beginner%20Workout/Leg%20Beginner/donkeykickleft.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277373/Sadhana/Beginner%20Workout/Leg%20Beginner/backwardlungee.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+            <div class="read-more">
+                <button class="read-more-btn" onclick="readMore('Leg Beginner', 'leg-beginner')">Read More</button>
+            </div>
+        </div>
+        </div>
+     <!-- Leg Beginner Section End -->
+
+       <!-- Shoulder & Back Beginner Section Start -->
+     <div class="container my-5">
+        <h4>Shoulder & Back Beginner (17mins . 17 workouts)</h4>
+
+        <div class="video-section">
+            <div class="video-container">
+                <video autoplay muted loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277464/Sadhana/Beginner%20Workout/Arm%20Beginner/inchworms.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277464/Sadhana/Beginner%20Workout/Arm%20Beginner/punches.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277466/Sadhana/Beginner%20Workout/Arm%20Beginner/sidearmraise.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277468/Sadhana/Beginner%20Workout/Arm%20Beginner/tricepsstretchleft.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+            <div class="read-more">
+                <button class="read-more-btn" onclick="readMore('Back Beginner', 'back-beginner')">Read More</button>
+            </div>
+        </div>
+        </div>
+     <!-- Shoulder & Back Beginnet Section Beginner End -->
+        </div>
+        <!--------------------------- Beginner Workout Section End------------------------------------->
+
+        <!--------------------------Intermediate Workout Section Start------------------------------>
+        <div id="intermediate-workout" class="workout-container">
+        <h3 class="text-center mb-4">Intermediate</h3>
+        <!-- Abs Intermediate Section Start -->
+        <div class="container my-5">
+        <h4>Abs Intermediate (20mins . 16 workouts)</h4>
+
+        <div class="video-section">
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay">Play Video</div>
+        </div>
+
+        <div class="video-container">
+            <video autoplay muted controls loop>
+                <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277272/Sadhana/Beginner%20Workout/Abs%20Beginner/russiantwist.mp4" type="video/mp4">
+                Your browser does not support the video.
+            </video>
+            <div class="video-overlay">Play Video</div>
+        </div>
+
+        <div class="video-container">
+            <video autoplay muted controls loop>
+                <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/abdonimalcrunches.mp4" type="video/mp4">
+                Your browser does not support the video.
+            </video>
+            <div class="video-overlay">Play Video</div>
+        </div>
+
+        <div class="video-container">
+            <video autoplay muted controls loop>
+                <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277269/Sadhana/Beginner%20Workout/Abs%20Beginner/mountainclimber.mp4" type="video/mp4">
+                Your browser does not support the video.
+            </video>
+            <div class="video-overlay">Play Video</div>
+        </div>
+        <div class="read-more">
+            <button class="read-more-btn" onclick="readMore('Abs Intermediate', 'abs-intermediate')">Read More</button>
+        </div>
+        </div>
+        </div>
+        <!-- Abs Intermediate Section End -->
+
+         <!-- Chest Intermediate Section Start -->
+        <div class="container my-5">
+        <h4>Chest Intermediate (7mins . 11 workouts)</h4>
+
+      <div class="video-section">
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277434/Sadhana/Beginner%20Workout/Chest%20Beginner/widearmpushups.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay">Play Video</div>
+        </div>
+
+        <div class="video-container">
+            <video autoplay muted controls loop>
+                <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277431/Sadhana/Beginner%20Workout/Chest%20Beginner/pushups.mp4" type="video/mp4">
+                Your browser does not support the video.
+            </video>
+            <div class="video-overlay">Play Video</div>
+        </div>
+
+        <div class="video-container">
+            <video autoplay muted controls loop>
+                <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277430/Sadhana/Beginner%20Workout/Chest%20Beginner/kneepushups.mp4" type="video/mp4">
+                Your browser does not support the video.
+            </video>
+            <div class="video-overlay">Play Video</div>
+        </div>
+
+        <div class="video-container">
+            <video autoplay muted controls loop>
+                <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277426/Sadhana/Beginner%20Workout/Chest%20Beginner/d5ynephk7vjtzpzkae0o.mp4" type="video/mp4">
+                Your browser does not support the video.
+            </video>
+            <div class="video-overlay">Play Video</div>
+        </div>
+        <div class="read-more">
+            <button class="read-more-btn" onclick="readMore('Chest Intermediate', 'chest-intermediate')">Read More</button>
+        </div>
+          </div>
+        </div>
+         <!-- Chest Intermediate Section End -->
+
+         <!-- Arm Intermediate Section Start -->
+        <div class="container my-5">
+         <h4>Arm Intermediate (7mins . 11 workouts)</h4>
+
+         <div class="video-section">
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277464/Sadhana/Beginner%20Workout/Arm%20Beginner/inchworms.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay">Play Video</div>
+        </div>
+
+        <div class="video-container">
+            <video autoplay muted controls loop>
+                <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277464/Sadhana/Beginner%20Workout/Arm%20Beginner/punches.mp4" type="video/mp4">
+                Your browser does not support the video.
+            </video>
+            <div class="video-overlay">Play Video</div>
+        </div>
+
+        <div class="video-container">
+            <video autoplay muted controls loop>
+                <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277466/Sadhana/Beginner%20Workout/Arm%20Beginner/sidearmraise.mp4" type="video/mp4">
+                Your browser does not support the video.
+            </video>
+            <div class="video-overlay">Play Video</div>
+        </div>
+
+        <div class="video-container">
+            <video autoplay muted controls loop>
+                <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277468/Sadhana/Beginner%20Workout/Arm%20Beginner/tricepsstretchleft.mp4" type="video/mp4">
+                Your browser does not support the video.
+            </video>
+            <div class="video-overlay">Play Video</div>
+        </div>
+        <div class="read-more">
+            <button class="read-more-btn" onclick="readMore('Arm Intermediate', 'arm-intermediate')">Read More</button>
+        </div>
+             </div>
+         </div>
+            <!-- Arm Intermediate Section End -->
+
+         <!-- Leg Intermediate Section Start -->
+     <div class="container my-5">
+        <h4>Leg Intermediate (7mins . 11 workouts)</h4>
+
+        <div class="video-section">
+            <div class="video-container">
+                <video autoplay muted loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277464/Sadhana/Beginner%20Workout/Arm%20Beginner/inchworms.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277464/Sadhana/Beginner%20Workout/Arm%20Beginner/punches.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277466/Sadhana/Beginner%20Workout/Arm%20Beginner/sidearmraise.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277468/Sadhana/Beginner%20Workout/Arm%20Beginner/tricepsstretchleft.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+            <div class="read-more">
+                <button class="read-more-btn" onclick="readMore('Leg Intermediate', 'leg-intermediate')">Read More</button>
+            </div>
+        </div>
+        </div>
+     <!-- Leg Intermediate Section End -->
+
+      <!-- Shoulder & Back Intermediate Section Start -->
+      <div class="container my-5">
+        <h4>Shoulder & Back Intermediate(7mins . 11 workouts)</h4>
+
+        <div class="video-section">
+            <div class="video-container">
+                <video autoplay muted loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277464/Sadhana/Beginner%20Workout/Arm%20Beginner/inchworms.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277464/Sadhana/Beginner%20Workout/Arm%20Beginner/punches.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277466/Sadhana/Beginner%20Workout/Arm%20Beginner/sidearmraise.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277468/Sadhana/Beginner%20Workout/Arm%20Beginner/tricepsstretchleft.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+            <div class="read-more">
+                <button class="read-more-btn" onclick="readMore('Back Intermediate', 'back-intermediate')">Read More</button>
+            </div>
+        </div>
+        </div>
+     <!-- Shoulder & Back Intermediate Section End -->
+         </div>
+     <!--------------------------- Intermediate Workout Section End------------------------------------->
+
+        <!--------------------------Advanced Workout Section Start------------------------------>
+            <div id="advanced-workout" class="workout-container">
+      <h3 class="text-center mb-4">Advanced</h3>
+      <!-- Abs Advanced Section Start -->
+     <div class="container my-5">
+     <h4>Abs Advanced (20mins . 16 workouts)</h4>
+
+     <div class="video-section">
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/jumpingjacks.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay">Play Video</div>
+        </div>
+
+        <div class="video-container">
+            <video autoplay muted controls loop>
+                <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277272/Sadhana/Beginner%20Workout/Abs%20Beginner/russiantwist.mp4" type="video/mp4">
+                Your browser does not support the video.
+            </video>
+            <div class="video-overlay">Play Video</div>
+        </div>
+
+        <div class="video-container">
+            <video autoplay muted controls loop>
+                <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277264/Sadhana/Beginner%20Workout/Abs%20Beginner/abdonimalcrunches.mp4" type="video/mp4">
+                Your browser does not support the video.
+            </video>
+            <div class="video-overlay">Play Video</div>
+        </div>
+
+        <div class="video-container">
+            <video autoplay muted controls loop>
+                <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277269/Sadhana/Beginner%20Workout/Abs%20Beginner/mountainclimber.mp4" type="video/mp4">
+                Your browser does not support the video.
+            </video>
+            <div class="video-overlay">Play Video</div>
+        </div>
+        <div class="read-more">
+            <button class="read-more-btn" onclick="readMore('Abs Advanced', 'abs-advanced')">Read More</button>
+        </div>
+         </div>
+         </div>
+            <!-- Abs Advanced End -->
+
+             <!-- Chest Advanced Section Start -->
+        <div class="container my-5">
+         <h4>Chest Advanced (7mins . 11 workouts)</h4>
+
+        <div class="video-section">
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277434/Sadhana/Beginner%20Workout/Chest%20Beginner/widearmpushups.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay">Play Video</div>
+        </div>
+
+        <div class="video-container">
+            <video autoplay muted controls loop>
+                <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277431/Sadhana/Beginner%20Workout/Chest%20Beginner/pushups.mp4" type="video/mp4">
+                Your browser does not support the video.
+            </video>
+            <div class="video-overlay">Play Video</div>
+        </div>
+
+        <div class="video-container">
+            <video autoplay muted controls loop>
+                <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277430/Sadhana/Beginner%20Workout/Chest%20Beginner/kneepushups.mp4" type="video/mp4">
+                Your browser does not support the video.
+            </video>
+            <div class="video-overlay">Play Video</div>
+        </div>
+
+        <div class="video-container">
+            <video autoplay muted controls loop>
+                <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277426/Sadhana/Beginner%20Workout/Chest%20Beginner/d5ynephk7vjtzpzkae0o.mp4" type="video/mp4">
+                Your browser does not support the video.
+            </video>
+            <div class="video-overlay">Play Video</div>
+        </div>
+        <div class="read-more">
+            <button class="read-more-btn" onclick="readMore('Chest Advanced', 'chest-advanced')">Read More</button>
+        </div>
+        </div>
+                </div>
+         <!-- Chest Advanced End -->
+
+        <!-- Arm Advanced Section Start -->
+        <div class="container my-5">
+          <h4>Arm Advanced (7mins . 11 workouts)</h4>
+
+         <div class="video-section">
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277464/Sadhana/Beginner%20Workout/Arm%20Beginner/inchworms.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay">Play Video</div>
+        </div>
+
+        <div class="video-container">
+            <video autoplay muted controls loop>
+                <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277464/Sadhana/Beginner%20Workout/Arm%20Beginner/punches.mp4" type="video/mp4">
+                Your browser does not support the video.
+            </video>
+            <div class="video-overlay">Play Video</div>
+        </div>
+
+        <div class="video-container">
+            <video autoplay muted controls loop>
+                <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277466/Sadhana/Beginner%20Workout/Arm%20Beginner/sidearmraise.mp4" type="video/mp4">
+                Your browser does not support the video.
+            </video>
+            <div class="video-overlay">Play Video</div>
+        </div>
+
+        <div class="video-container">
+            <video autoplay muted controls loop>
+                <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277468/Sadhana/Beginner%20Workout/Arm%20Beginner/tricepsstretchleft.mp4" type="video/mp4">
+                Your browser does not support the video.
+            </video>
+            <div class="video-overlay">Play Video</div>
+        </div>
+        <div class="read-more">
+            <button class="read-more-btn" onclick="readMore('Arm Advanced', 'arm-advanced')">Read More</button>
+        </div>
+             </div>
+         </div>
+        <!-- Arm Advanced End -->
+
+         <!-- Leg Advanced Section Start -->
+     <div class="container my-5">
+        <h4>Leg Advanced (7mins . 11 workouts)</h4>
+
+        <div class="video-section">
+            <div class="video-container">
+                <video autoplay muted loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277464/Sadhana/Beginner%20Workout/Arm%20Beginner/inchworms.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277464/Sadhana/Beginner%20Workout/Arm%20Beginner/punches.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277466/Sadhana/Beginner%20Workout/Arm%20Beginner/sidearmraise.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277468/Sadhana/Beginner%20Workout/Arm%20Beginner/tricepsstretchleft.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+            <div class="read-more">
+                <button class="read-more-btn" onclick="readMore('Leg Advanced', 'leg-advanced')">Read More</button>
+            </div>
+        </div>
+        </div>
+     <!-- Leg Advanced Section End -->
+
+      <!-- Shoulder & Back Advanced Section Start -->
+      <div class="container my-5">
+        <h4>Shoulder & Back Advanced (7mins . 11 workouts)</h4>
+
+        <div class="video-section">
+            <div class="video-container">
+                <video autoplay muted loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277464/Sadhana/Beginner%20Workout/Arm%20Beginner/inchworms.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277464/Sadhana/Beginner%20Workout/Arm%20Beginner/punches.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277466/Sadhana/Beginner%20Workout/Arm%20Beginner/sidearmraise.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+
+            <div class="video-container">
+                <video autoplay muted controls loop>
+                    <source src="https://res.cloudinary.com/deup6t83x/video/upload/v1721277468/Sadhana/Beginner%20Workout/Arm%20Beginner/tricepsstretchleft.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <div class="video-overlay">Play Video</div>
+            </div>
+            <div class="read-more">
+                <button class="read-more-btn" onclick="readMore('Back Advanced', 'back-advanced')">Read More</button>
+            </div>
+        </div>
+        </div>
+     <!-- Shoulder & Back Advanced Section End -->
+        </div>
+    <!--------------------------- Advanced Workout Section End------------------------------------->
+    </div>
+    </div>
+         </div>
+        <!-- Main Content End -->
+      <!-- Footer Start -->
+         <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Get In Touch</h4>
+                <div class="d-flex mb-2">
+                    <i class="bi bi-geo-alt text-primary me-2"></i>
+                    <p>NSTI(w) Noida UP</p>
+                </div>
+                <div class="d-flex mb-2">
+                    <i class="bi bi-envelope-open text-primary me-2"></i>
+                    <p>fit4life201301@gmail.com</p>
+                </div>
+                <div class="d-flex mb-2">
+                    <i class="bi bi-telephone text-primary me-2"></i>
+                    <p>+91 841-8081-396</p>
+                </div>
+                
+            </div>
+            <div class="footer-section">
+                <img src="https://res.cloudinary.com/dbzlzmrhc/image/upload/v1718185446/logo_gzw8mq.png" alt="logo" class="img-fluid logo-img rotate-image">
+                <p class="text-secondary mb-2">Discover Your Potential,<br> Transform Your Life with Us.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4 class="footerlinks">Quick Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-secondary mb-2" href="index"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                    <a class="text-secondary mb-2" href="about"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
+                    <a class="text-secondary mb-2" href="workout"><i class="bi bi-arrow-right text-primary me-2"></i>WorkOut</a>
+                    <a class="text-secondary" href="contact"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                </div>
+           </div>
+        </div>
+        <div class="container-fluid py-4 py-lg-0 px-5" style="background: #111111;">
+        <div class="row gx-5">
+            <div class="col-lg-8">
+                <div class="py-lg-4 text-center">
+                    <p class="text-secondary mb-0">&copy; <a class="text-light fw-bold" href="#">Fit4Life</a>. All Rights Reserved.</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="py-lg-4 text-center credit">
+                    <p class="text-light mb-0">Designed by <a class="text-light fw-bold">Health Heros</a></p>
+                </div>
+            </div>
+        </div>
+         </div>
+         </footer>
+        <!-- Footer End -->
+        <!-- Modal for login prompt -->
+        <div id="loginPromptModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Please log in to access the videos.</p>
+        <button id="loginNowBtn" class="btn btn-primary">Login Now</button>
+      </div>
+</div>
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-dark py-3 fs-4 back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+    document.getElementById('beginner-btn').addEventListener('click', function() {
+        setActiveSection('beginner');
+    });
+    document.getElementById('intermediate-btn').addEventListener('click', function() {
+        setActiveSection('intermediate');
+    });
+    document.getElementById('advanced-btn').addEventListener('click', function() {
+        setActiveSection('advanced');
+    });
+    
+    function setActiveSection(level) {
+        document.querySelectorAll('.section-selector button').forEach(function(btn) {
+            btn.classList.remove('active');
+        });
+        document.querySelectorAll('.workout-container').forEach(function(container) {
+            container.classList.remove('active');
+        });
+        document.getElementById(level + '-btn').classList.add('active');
+        document.getElementById(level + '-workout').classList.add('active');
+    }
+    
+    function checkLoginState() {
+        const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+        const authButton = document.getElementById('authButton');
+        const dashboardLink = document.querySelector('.nav-item.nav-link[href="Dashboard/index.html"]');
+    
+        if (isLoggedIn) {
+            authButton.textContent = 'Logout';
+            authButton.onclick = function() {
+                localStorage.removeItem('isLoggedIn');
+                window.location.href = "index";
+            };
+            if (dashboardLink) {
+                dashboardLink.style.display = 'inline'; // Show the dashboard link
+            }
+        } else {
+            authButton.textContent = 'Login';
+            authButton.onclick = function() {
+                window.location.href = "login";
+            };
+            if (dashboardLink) {
+                dashboardLink.style.display = 'none'; // Hide the dashboard link
+            }
+        }
+    }
+    
+    document.addEventListener('DOMContentLoaded', checkLoginState);
+    
+    function readMore(title, type) {
+        const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+        if (isLoggedIn) {
+            console.log(`Redirecting to video with title=${title} and type=${type}`);
+            window.location.href = `video?title=${encodeURIComponent(title)}&type=${encodeURIComponent(type)}`;
+        } else {
+            // Set data attributes for the login button
+            const loginNowBtn = document.getElementById('loginNowBtn');
+            loginNowBtn.setAttribute('data-title', title);
+            loginNowBtn.setAttribute('data-type', type);
+            // Show login prompt modal
+            document.getElementById('loginPromptModal').style.display = 'block';
+        }
+    }
+    
+    // Modal functionality
+    const modal = document.getElementById('loginPromptModal');
+    const closeModal = document.getElementsByClassName('close')[0];
+    const loginNowBtn = document.getElementById('loginNowBtn');
+    
+    closeModal.onclick = function() {
+        modal.style.display = 'none';
+    }
+    
+    loginNowBtn.onclick = function() {
+    const title = encodeURIComponent(loginNowBtn.getAttribute('data-title'));
+    const type = encodeURIComponent(loginNowBtn.getAttribute('data-type'));
+    // Construct the URL correctly
+    const redirectUrl = `video?title=${title}&type=${type}`;
+    // Redirect to login page with the redirect URL as a parameter
+    window.location.href = `login?redirect=${encodeURIComponent(redirectUrl)}`;
+}
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+    </script>
+</body>
+</html>

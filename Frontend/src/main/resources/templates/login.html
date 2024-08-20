@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="https://res.cloudinary.com/deup6t83x/image/upload/v1721236251/logo_pctu2u.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <div class="close-button" onclick="redirectToIndex()">×</div>
+        <div class="login-link">
+            <div class="logo">
+                <i class='bx bx-pencil'></i>
+                <span class="text">Fit4Life</span>
+            </div>
+            <p class="side-big-hedaing">Create your Account</p>
+            <p class="primary-bg-text">To keep track of your dashboard, please login with your personal info.</p>
+            <a href="signup" class="loginbtn">Register now</a>
+        </div>
+        <form id="loginForm" class="signup-form-container">
+            <p class="big-heading">Login to your account</p>
+            <br><br><br>
+            <div class="login-form-contents">
+                <div class="text-fields email">
+                    <label for="email"><i class='bx bx-envelope'></i></label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email id">
+                </div>
+                <div class="text-fields password">
+                    <label for="password"><i class='bx bx-lock-alt'></i></label>
+                    <input type="password" name="password" id="password" placeholder="Enter password">
+                    <i class='bx bx-hide password-toggle' id="togglePassword"></i>
+                </div>
+                <center
+                ><a href="forgot" class="forgot-password">Forgot Password?</a></center>
+                
+                <br>
+            </div>
+            <input type="button" value="Login" onclick="submitLoginDetails()" class="nextPage">
+        </form>
+    </div>
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script>
+        // Toggle password visibility
+        const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#password');
+    
+        togglePassword.addEventListener('click', function () {
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            this.classList.toggle('bx-show');
+            this.classList.toggle('bx-hide');
+        });
+
+        // Login form functionality
+        function submitLoginDetails() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            let errorMessage = '';
+
+            if (!email) {
+                errorMessage += 'Please enter your email.\n';
+            } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                errorMessage += 'Please enter a valid email address.\n';
+            }
+
+            if (!password) {
+                errorMessage += 'Please enter your password.\n';
+            } else if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,12}$/.test(password)) {
+                errorMessage += 'Password must be 8-12 characters long, include at least one uppercase letter, one lowercase letter, one number, and one special character.\n';
+            }
+
+            if (errorMessage) {
+                alert(errorMessage.trim());
+            } else {
+                alert('Login successful!');
+                localStorage.setItem('isLoggedIn', 'true');
+                const urlParams = new URLSearchParams(window.location.search);
+                const redirectUrl = urlParams.get('redirect') || 'index';
+                window.location.href = redirectUrl;
+            }
+        }
+
+        // Function to redirect to index.html
+        function redirectToIndex() {
+            window.location.href = 'index';
+        }
+    </script>
+</body>
+</html>
