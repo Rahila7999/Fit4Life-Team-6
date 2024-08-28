@@ -17,6 +17,8 @@ public class Controller {
         return "workout"; 
     }
 	
+    
+
 	@GetMapping("/about")
     public String getaboutPage() {
         return "about"; 
