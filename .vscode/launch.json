@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-GauravApplication<Gaurav>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.adit.Gaurav.GauravApplication",
+            "projectName": "Gaurav",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
