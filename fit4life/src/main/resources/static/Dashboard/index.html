@@ -159,29 +159,18 @@
 				</div>
 			</div>
 			
-				
-				<div class="user-info-dropdown">
-					<div class="dropdown">
-						<a
-							class="dropdown-toggle"
-							href="#"
-							role="button"
-							data-toggle="dropdown"
-						>
-							<span class="user-icon">
-								<img src="vendors/images/photo1.jpg" alt="" />
-							</span>
-							<span class="user-name">Sadhana</span>
-						</a>
-						<div
-							class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list"
-						>
-							
-							<a id="logoutButton" class="dropdown-item" href="/index"><i class="dw dw-logout"></i> Log Out</a>
-
-						</div>
+			<div class="user-info-dropdown">
+				<div class="dropdown">
+					<a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+						<!-- Image tag removed -->
+						<span class="user-name"></span> <!-- Username will be displayed here -->
+					</a>
+					<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+						<a id="logoutButton" class="dropdown-item" href="#"><i class="dw dw-logout"></i> Log Out</a>
 					</div>
 				</div>
+			</div>
+			
 				
 			</div>
 		</div>
@@ -352,28 +341,33 @@
 		<script>
 			function checkLoginState() {
 				const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+				const username = localStorage.getItem('username');
 				const logoutButton = document.getElementById('logoutButton');
+				const userNameSpan = document.querySelector('.user-name');
 		
-				if (isLoggedIn) {
-					// Always show the logout button
+				if (isLoggedIn && username) {
 					if (logoutButton) {
-						logoutButton.style.display = 'block'; // Ensure the logout button is visible
+						logoutButton.style.display = 'block'; // Show the logout button
 						logoutButton.onclick = function() {
 							localStorage.removeItem('isLoggedIn');
-							window.location.href = "index.html"; // Redirect to index.html on logout
+							localStorage.removeItem('username');
+							window.location.href = "index"; // Redirect to index.html on logout
 						};
 					}
-				} else {
-					// Optionally, you can hide the button or handle it if needed
-					if (logoutButton) {
-						logoutButton.style.display = 'none'; // Hide if not logged in
+		
+					if (userNameSpan) {
+						userNameSpan.textContent = username; // Display the username in the dashboard
 					}
+				} else {
+					// If not logged in, redirect to the login page
+					window.location.href = "login";
 				}
 			}
 		
 			// Run the function to check login state on page load
 			document.addEventListener('DOMContentLoaded', checkLoginState);
 		</script>
+		
 		
 		
 	</body>
