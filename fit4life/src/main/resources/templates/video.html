@@ -53,8 +53,12 @@
                             <a href="about" class="nav-item nav-link">About</a>
                             <a href="contact" class="nav-item nav-link">Contact</a>
                         </div>
-                        <div class="d-flex justify-content-end">
-                            <button id="authButton" class="btn btn-primary py-md-1 px-md-3 d-none d-lg-block"></button>
+                        <div class="nav-item dropdown">
+                            <a href="" id="loginDropdown" class="btn btn-primary py-md-3 px-md-5 d-none d-lg-block nav-link dropdown-toggle" data-bs-toggle="dropdown">Login</a>
+                            <div class="dropdown-menu rounded-0 m-0" id="dropdownMenu">
+                                <a href="login" class="dropdown-item">User Login</a>
+                                <a href="admin_login.html" class="dropdown-item">Admin Login</a>
+                            </div>
                         </div>
                     </div>
                 </nav>
@@ -179,33 +183,57 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/video.js"></script>
-    <script>function checkLoginState() {
-        const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-        const authButton = document.getElementById('authButton');
-        const dashboardLink = document.querySelector('.nav-item.nav-link[href="Dashboard/index.html"]');
-    
-        if (isLoggedIn) {
-            authButton.textContent = 'Logout';
-            authButton.onclick = function() {
-                localStorage.removeItem('isLoggedIn');
-                window.location.href = "index";
-            };
+    <script>
+        function checkLoginState() {
+            const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+            const dashboardLink = document.querySelector('.nav-item.nav-link[href="Dashboard/index.html"]');
+            const registerButtons = document.querySelectorAll('a[href="/Frontend/signup"]');
+            const contactButtons = document.querySelectorAll('a[href="/Frontend/contact"]');
             if (dashboardLink) {
-                dashboardLink.style.display = 'inline'; // Show the dashboard link
+                dashboardLink.style.display = isLoggedIn ? 'inline' : 'none'; // Show or hide the dashboard link
+            } else {
+                console.error('Dashboard link not found');
             }
-        } else {
-            authButton.textContent = 'Login';
-            authButton.onclick = function() {
-                window.location.href = "login";
-            };
-            if (dashboardLink) {
-                dashboardLink.style.display = 'none'; // Hide the dashboard link
-            }
+        
+            // Hiding or showing the register buttons based on login state
+            registerButtons.forEach(button => {
+                if (button) {
+                    button.style.display = isLoggedIn ? 'none' : 'inline';
+                } else {
+                    console.error('Register button not found');
+                }
+            });
+        
+            // Hiding or showing the contact buttons based on login state
+            contactButtons.forEach(button => {
+                if (button) {
+                    button.style.display = isLoggedIn ? 'none' : 'inline';
+                } else {
+                    console.error('Contact button not found');
+                }
+            });
         }
-    }
+        
+        // Run the function to check login state on page load
+        document.addEventListener('DOMContentLoaded', checkLoginState);
     
-    // Run the function to check login state on page load
-    document.addEventListener('DOMContentLoaded', checkLoginState);
-    </script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+            const username = localStorage.getItem('username');
+            const loginDropdown = document.getElementById('loginDropdown');
+            const dropdownMenu = document.getElementById('dropdownMenu');
+    
+            if (isLoggedIn === 'true' && username) {
+                loginDropdown.textContent = username;
+                dropdownMenu.innerHTML = '<a href="#" class="dropdown-item" id="logout">Logout</a>';
+    
+                document.getElementById('logout').addEventListener('click', function() {
+                    localStorage.removeItem('isLoggedIn');
+                    localStorage.removeItem('username');
+                    window.location.href = 'index';
+                });
+            }
+        });
+    </script>            
 </body>
 </html>

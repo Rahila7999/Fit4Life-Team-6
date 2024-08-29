@@ -52,12 +52,12 @@
                             <a href="contact" class="nav-item nav-link">Contact</a>
                         </div>
                         <div class="nav-item dropdown">
-                        <a href="" class="btn btn-primary py-md-3 px-md-5 d-none d-lg-block nav-link dropdown-toggle" data-bs-toggle="dropdown">Login</a>
-                        <div class="dropdown-menu rounded-0 m-0">
-                            <a href="login" class="dropdown-item">User Login</a>
-                            <a href="admin_login.html" class="dropdown-item">Admin Login</a>
+                            <a href="" id="loginDropdown" class="btn btn-primary py-md-3 px-md-5 d-none d-lg-block nav-link dropdown-toggle" data-bs-toggle="dropdown">Login</a>
+                            <div class="dropdown-menu rounded-0 m-0" id="dropdownMenu">
+                                <a href="login" class="dropdown-item">User Login</a>
+                                <a href="admin_login.html" class="dropdown-item">Admin Login</a>
+                            </div>
                         </div>
-                    </div>
                     </div>
                 </nav>
             </div>
@@ -257,9 +257,6 @@
         const dashboardLink = document.querySelector('.nav-item.nav-link[href="Dashboard/index.html"]');
         const registerButtons = document.querySelectorAll('a[href="/Frontend/signup"]');
         const contactButtons = document.querySelectorAll('a[href="/Frontend/contact"]');
-    
-       
-    
         if (dashboardLink) {
             dashboardLink.style.display = isLoggedIn ? 'inline' : 'none'; // Show or hide the dashboard link
         } else {
@@ -287,7 +284,24 @@
     
     // Run the function to check login state on page load
     document.addEventListener('DOMContentLoaded', checkLoginState);
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const isLoggedIn = localStorage.getItem('isLoggedIn');
+        const username = localStorage.getItem('username');
+        const loginDropdown = document.getElementById('loginDropdown');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+
+        if (isLoggedIn === 'true' && username) {
+            loginDropdown.textContent = username;
+            dropdownMenu.innerHTML = '<a href="#" class="dropdown-item" id="logout">Logout</a>';
+
+            document.getElementById('logout').addEventListener('click', function() {
+                localStorage.removeItem('isLoggedIn');
+                localStorage.removeItem('username');
+                window.location.href = 'index';
+            });
+        }
+    });
 </script>        
-    
 </body>
 </html>
