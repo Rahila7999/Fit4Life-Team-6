@@ -1,236 +1,593 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Admin Dashboard</title>
+    <meta
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+      name="viewport"
+    />
+    <link
+      rel="icon"
+      href="https://res.cloudinary.com/deup6t83x/image/upload/v1721236251/logo_pctu2u.png"
+      type="image/x-icon"
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New User Registration</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        body {
-            justify-content: center;
-            align-items: center;
-            display: flex;
-            text-align: center;
-            width: 100%;
-            background-image: url('https://t3.ftcdn.net/jpg/04/29/35/62/360_F_429356296_CVQ5LkC6Pl55kUNLqLisVKgTw9vjyif1.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .form-container {
-            position: relative;
-            background-color: #ffffffdd;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            max-width: 600px;
-            width: 100%;
-        }
-
-        .form-container h2 {
-            text-align: center;
-            margin-bottom: 25px;
-            color: #333;
-        }
-
-        .form-row {
-            display: flex;
-            gap: 50px;
-            margin-bottom: 20px;
-        }
-
-        .form-group {
-            flex: 1;
-            min-width: 0;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #555;
-        }
-
-        .form-group input,
-        .form-group select {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus {
-            border-color: #7ec1f7;
-        }
-
-        .form-group input[type="submit"] {
-            background-color: #2611c4;
-            color: white;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            font-size: 16px;
-        }
-
-        .form-group input[type="submit"]:hover {
-            background-color: #155cc6;
-        }
-
-        .close-icon {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 20px;
-            color: #555;
-            cursor: pointer;
-        }
-
-        .close-icon:hover {
-            color: #ff0000;
-        }
-
-        .error-message {
-            color: red;
-            font-size: 12px;
-            margin-top: 5px;
-            text-align: left;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="form-container">
-        <a href="index.html" class="close-icon" title="Close">
-            <i class="fas fa-times"></i>
-        </a>
-        <h2>Add a new user</h2>
-        <form id="userForm">
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="firstname">First Name</label>
-                    <input type="text" id="firstname" name="firstname">
-                    <div class="error-message" id="firstname-error"></div>
-                </div>
-                <div class="form-group">
-                    <label for="lastname">Last Name</label>
-                    <input type="text" id="lastname" name="lastname">
-                    <div class="error-message" id="lastname-error"></div>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="dob">Date of Birth</label>
-                    <input type="date" id="dob" name="dob">
-                    <div class="error-message" id="dob-error"></div>
-                </div>
-                <div class="form-group">
-                    <label for="gender">Gender</label>
-                    <select id="gender" name="gender">
-                        <option value="">Select Gender</option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                        <option value="other">Other</option>
-                    </select>
-                    <div class="error-message" id="gender-error"></div>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone">
-                    <div class="error-message" id="phone-error"></div>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email">
-                    <div class="error-message" id="email-error"></div>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password">
-                    <div class="error-message" id="password-error"></div>
-                </div>
-                <div class="form-group">
-                    <label for="confirm-password">Confirm Password</label>
-                    <input type="password" id="confirm-password" name="confirm-password">
-                    <div class="error-message" id="confirm-password-error"></div>
-                </div>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Add User">
-            </div>
-        </form>
-    </div>
-
+    <!-- Fonts and icons -->
+    <script src="../Admin Dashboard/assets/js/plugin/webfont/webfont.min.js"></script>
     <script>
-        const passwordValidator = (value) => {
-            const hasUpperCase = /[A-Z]/.test(value);
-            const hasLowerCase = /[a-z]/.test(value);
-            const hasNumber = /[0-9]/.test(value);
-            const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(value);
-            return value.length >= 8 && hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar;
-        };
-
-        document.getElementById("userForm").addEventListener("submit", function (event) {
-            event.preventDefault();
-            let isValid = true;
-
-            const fields = [
-                { id: "firstname", message: "First name is required", validator: value => value.trim() !== "" },
-                { id: "lastname", message: "Last name is required", validator: value => value.trim() !== "" },
-                { id: "dob", message: "Date of birth is required", validator: value => value.trim() !== "" },
-                { id: "gender", message: "Gender is required", validator: value => value.trim() !== "" },
-                { id: "phone", message: "Phone number must be 10 digits", validator: value => /^\d{10}$/.test(value) },
-                { id: "email", message: "Valid email is required", validator: value => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) },
-                { id: "password", message: "Password must be at least 8 characters, include uppercase, lowercase, number, and special character", validator: passwordValidator },
-                { id: "confirm-password", message: "Please confirm your password", validator: value => value.trim() !== "" }
-            ];
-
-            fields.forEach(field => {
-                const input = document.getElementById(field.id);
-                const errorDiv = document.getElementById(`${field.id}-error`);
-
-                if (!field.validator(input.value)) {
-                    isValid = false;
-                    errorDiv.textContent = field.message;
-                } else {
-                    errorDiv.textContent = "";
-                }
-            });
-
-            const password = document.getElementById("password").value;
-            const confirmPassword = document.getElementById("confirm-password").value;
-            if (password !== confirmPassword) {
-                isValid = false;
-                document.getElementById("confirm-password-error").textContent = "Passwords do not match";
-            } else {
-                document.getElementById("confirm-password-error").textContent = "";
-            }
-
-            if (isValid) {
-                alert("Form submitted successfully!");
-                // Here, you can submit the form data using AJAX or any other method
-            }
-        });
-
-        document.querySelectorAll("input, select").forEach(input => {
-            input.addEventListener("input", () => {
-                const errorDiv = document.getElementById(`${input.id}-error`);
-                const field = fields.find(f => f.id === input.id);
-                if (field && field.validator(input.value)) {
-                    errorDiv.textContent = "";
-                }
-            });
-        });
+      WebFont.load({
+        google: { families: ["Public Sans:300,400,500,600,700"] },
+        custom: {
+          families: [
+            "Font Awesome 5 Solid",
+            "Font Awesome 5 Regular",
+            "Font Awesome 5 Brands",
+            "simple-line-icons",
+          ],
+          urls: ["../Admin Dashboard/assets/css/fonts.min.css"],
+        },
+        active: function () {
+          sessionStorage.fonts = true;
+        },
+      });
     </script>
-</body>
+    <style>
+      .highlight-label{
+        font-weight: bold;
+      }
+    </style>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../Admin Dashboard/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../Admin Dashboard/assets/css/plugins.min.css" />
+    <link rel="stylesheet" href="../Admin Dashboard/assets/css/kaiadmin.min.css" />
+
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link rel="stylesheet" href="../Admin Dashboard/assets/css/demo.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Sidebar -->
+      <div class="sidebar" data-background-color="dark">
+        <div class="sidebar-logo">
+          <!-- Logo Header -->
+          <div class="logo-header" data-background-color="dark">
+            <a href="index.html" class="logo">
+              <img
+                src="https://res.cloudinary.com/deup6t83x/image/upload/v1721236251/logo_pctu2u.png"
+                alt="navbar brand"
+                class="navbar-brand"
+                height="65"
+              />
+            </a>
+            <div class="nav-toggle">
+              <button class="btn btn-toggle toggle-sidebar">
+                <i class="gg-menu-right"></i>
+              </button>
+              <button class="btn btn-toggle sidenav-toggler">
+                <i class="gg-menu-left"></i>
+              </button>
+            </div>
+            <button class="topbar-toggler more">
+              <i class="gg-more-vertical-alt"></i>
+            </button>
+          </div>
+          <!-- End Logo Header -->
+        </div>
+        <div class="sidebar-wrapper scrollbar scrollbar-inner">
+          <div class="sidebar-content">
+            <ul class="nav nav-secondary">
+              <li class="nav-item">
+                <a
+                data-bs-toggle="collapse"
+                href="#dashboard"
+                class="collapsed"
+                aria-expanded="false"
+              >
+                <i class="fas fa-home"></i>
+                <p>Dashboard</p>
+                <span class="caret"></span>
+              </a>
+              <div class="collapse" id="dashboard">
+                <ul class="nav nav-collapse">
+                  <li>
+                    <a href="index.html">
+                      <span class="sub-item">Main Dashboard</span>
+                    </a>
+                  </li>
+                </ul>
+              <li class="nav-item">
+                <a data-bs-toggle="collapse" href="#forms">
+                  <i class="fas fa-pen-square"></i>
+                  <p>Add new Activity</p>
+                  <span class="caret"></span>
+                </a>
+                <div class="collapse" id="forms">
+                  <ul class="nav nav-collapse">
+                    <li class="active">
+                      <li>
+                        <a href="beginner.html">
+                          <span class="sub-item">Beginner</span>
+                        </a>
+                        <a href="intermediate.html">
+                          <span class="sub-item">Intermediate</span>
+                        </a>
+                        <a href="advanced.html">
+                          <span class="sub-item">Advanced</span>
+                        </a>
+                      </li>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item active submenu">
+                <a data-bs-toggle="collapse" href="#adduser">
+                  <i class="fas fa-user"></i>
+                  <p>Add new User</p>
+                  <span class="caret"></span>
+                </a>
+                <div class="collapse show" id="adduser">
+                  <ul class="nav nav-collapse">
+                    <li class="active">
+                      <a href="adduser.html">
+                        <span class="sub-item">Add</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a data-bs-toggle="collapse" href="#tables">
+                  <i class="fas fa-table"></i>
+                  <p>Tables</p>
+                  <span class="caret"></span>
+                </a>
+                <div class="collapse" id="tables">
+                  <ul class="nav nav-collapse">
+                
+                    <li>
+                      <a href="datatables.html">
+                        <span class="sub-item">Registered User</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="../Admin Dashboard/../../documentation/index.html">
+                  <i class="fas fa-file"></i>
+                  <p>Documentation</p>
+                  <span class="badge badge-secondary">1</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <div class="collapse" id="submenu">
+                  <ul class="nav nav-collapse">  
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- End Sidebar -->
+
+      <div class="main-panel">
+        <div class="main-header">
+          <div class="main-header-logo">
+            <!-- Logo Header -->
+            <div class="logo-header" data-background-color="dark">
+              <a href="index.html" class="logo">
+                <img
+                  src="https://res.cloudinary.com/deup6t83x/image/upload/v1721236251/logo_pctu2u.png"
+                  alt="navbar brand"
+                  class="navbar-brand"
+                />
+              </a>
+              <div class="nav-toggle">
+                <button class="btn btn-toggle toggle-sidebar">
+                  <i class="gg-menu-right"></i>
+                </button>
+                <button class="btn btn-toggle sidenav-toggler">
+                  <i class="gg-menu-left"></i>
+                </button>
+              </div>
+              <button class="topbar-toggler more">
+                <i class="gg-more-vertical-alt"></i>
+              </button>
+            </div>
+            <!-- End Logo Header -->
+          </div>
+          <!-- Navbar Header -->
+          <nav
+            class="navbar navbar-header navbar-header-transparent navbar-expand-lg border-bottom"
+          >
+            <div class="container-fluid">
+              <nav
+                class="navbar navbar-header-left navbar-expand-lg navbar-form nav-search p-0 d-none d-lg-flex"
+              >
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <button type="submit" class="btn btn-search pe-1">
+                      <i class="fa fa-search search-icon"></i>
+                    </button>
+                  </div>
+                  <input
+                    type="text"
+                    placeholder="Search ..."
+                    class="form-control"
+                  />
+                </div>
+              </nav>
+
+              <ul class="navbar-nav topbar-nav ms-md-auto align-items-center">
+                <li
+                  class="nav-item topbar-icon dropdown hidden-caret d-flex d-lg-none"
+                >
+                  <a
+                    class="nav-link dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    href="#"
+                    role="button"
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                  >
+                    <i class="fa fa-search"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-search animated fadeIn">
+                    <form class="navbar-left navbar-form nav-search">
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          placeholder="Search ..."
+                          class="form-control"
+                        />
+                      </div>
+                    </form>
+                  </ul>
+                </li>
+                <li class="nav-item topbar-icon dropdown hidden-caret">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="messageDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                  <li class="nav-item topbar-user dropdown hidden-caret">
+                    <a
+                      class="dropdown-toggle profile-pic"
+                      data-bs-toggle="dropdown"
+                      href="#"
+                      aria-expanded="false"
+                    >
+                      <div class="avatar-sm">
+                        <img
+                          src="https://res.cloudinary.com/deup6t83x/image/upload/v1725000463/admin_pic_sencpk.webp"
+                          alt="Profile Picture"
+                          class="avatar-img rounded-circle"
+                        />
+                      </div>
+                      <span class="profile-username">
+                        <span class="op-7">Hi,</span>
+                        <span class="fw-bold">Rahila</span>
+                      </span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user animated fadeIn">
+                      <li>
+                        <a class="dropdown-item" href="#">Logout</a>
+                      </li>
+                    </ul>
+                  </li>
+                  
+              </ul>
+            </div>
+          </nav>
+          <!-- End Navbar -->
+        </div>
+<!--    Form section  -->
+<div class="container">
+  <div class="page-inner">
+    <div class="page-header">
+      <h3 class="fw-bold mb-3">ADD</h3>
+      <ul class="breadcrumbs mb-3">
+        <li class="nav-home">
+          <a href="#">
+            <i class="icon-home"></i>
+          </a>
+        </li>
+        <li class="separator">
+          <i class="icon-arrow-right"></i>
+        </li>
+        <li class="nav-item">
+          <a href="#">New User</a>
+        </li> 
+      </ul>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Add New User</div>
+          </div>
+          <div class="card-body">
+            <form id="registrationForm">
+              <div class="row">
+                <!-- First Name -->
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="firstName" class="form-label highlight-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter your first name" />
+                    <small id="firstNameError" class="form-text text-danger"></small>
+                  </div>
+                </div>
+                <!-- Last Name -->
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="lastName" class="form-label highlight-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter your last name" />
+                    <small id="lastNameError" class="form-text text-danger"></small>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <!-- Date of Birth -->
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="dob" class="form-label highlight-label">Date of Birth</label>
+                    <input type="date" class="form-control" id="dob" name="dob" />
+                    <small id="dobError" class="form-text text-danger"></small>
+                  </div>
+                </div>
+                <!-- Gender -->
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="gender" class="form-label highlight-label">Gender</label>
+                    <select class="form-control" id="gender" name="gender">
+                      <option value="" disabled selected>Select your gender</option>
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                      <option value="other">Other</option>
+                    </select>
+                    <small id="genderError" class="form-text text-danger"></small>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <!-- Phone Number -->
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="phoneNumber" class="form-label highlight-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number" />
+                    <small id="phoneNumberError" class="form-text text-danger"></small>
+                  </div>
+                </div>
+                <!-- Email -->
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="email" class="form-label highlight-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" />
+                    <small id="emailError" class="form-text text-danger"></small>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <!-- Password -->
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="password" class="form-label highlight-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" />
+                    <small id="passwordError" class="form-text text-danger"></small>
+                  </div>
+                </div>
+                <!-- Confirm Password -->
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="confirmPassword" class="form-label highlight-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" />
+                    <small id="confirmPasswordError" class="form-text text-danger"></small>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center mt-3">
+                <button type="submit" class="btn btn-success me-2">Submit</button>
+                <button type="reset" class="btn btn-danger">Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>      
+<!--    Footer Section   -->
+        <footer class="footer">
+          <div class="container-fluid d-flex justify-content-between">
+            <div class="copyright">
+              &copy; All Rights Reserved by
+              <a href="#">Fit4life</a>
+            </div>
+            <div>
+              Distributed by
+              <a target="_blank" href="#">Health Heros</a>.
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <!--   Core JS Files   -->
+    <script src="../Admin Dashboard/assets/js/core/jquery-3.7.1.min.js"></script>
+    <script src="../Admin Dashboard/assets/js/core/popper.min.js"></script>
+    <script src="../Admin Dashboard/assets/js/core/bootstrap.min.js"></script>
+
+    <!-- jQuery Scrollbar -->
+    <script src="../Admin Dashboard/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+
+    <!-- Chart JS -->
+    <script src="../Admin Dashboard/assets/js/plugin/chart.js/chart.min.js"></script>
+
+    <!-- jQuery Sparkline -->
+    <script src="../Admin Dashboard/assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- Chart Circle -->
+    <script src="../Admin Dashboard/assets/js/plugin/chart-circle/circles.min.js"></script>
+
+    <!-- Datatables -->
+    <script src="../Admin Dashboard/assets/js/plugin/datatables/datatables.min.js"></script>
+
+    <!-- Bootstrap Notify -->
+    <script src="../Admin Dashboard/assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+
+    <!-- jQuery Vector Maps -->
+    <script src="../Admin Dashboard/assets/js/plugin/jsvectormap/jsvectormap.min.js"></script>
+    <script src="../Admin Dashboard/assets/js/plugin/jsvectormap/world.js"></script>
+
+    <!-- Google Maps Plugin -->
+    <script src="../Admin Dashboard/assets/js/plugin/gmaps/gmaps.js"></script>
+
+    <!-- Sweet Alert -->
+    <script src="../Admin Dashboard/assets/js/plugin/sweetalert/sweetalert.min.js"></script>
+
+    <!-- Kaiadmin JS -->
+    <script src="../Admin Dashboard/assets/js/kaiadmin.min.js"></script>
+
+    <!-- Kaiadmin DEMO methods, don't include it in your project! -->
+    <script src="../Admin Dashboard/assets/js/setting-demo2.js"></script>
+    <script>
+      const form = document.getElementById('registrationForm');
+    
+      form.addEventListener('submit', function(event) {
+        let isValid = true;
+    
+        // Validate First Name
+        const firstName = document.getElementById('firstName');
+        const firstNameError = document.getElementById('firstNameError');
+        if (firstName.value.trim() === '') {
+          firstNameError.textContent = 'First name is required.';
+          isValid = false;
+        } else {
+          firstNameError.textContent = '';
+        }
+    
+        // Validate Last Name
+        const lastName = document.getElementById('lastName');
+        const lastNameError = document.getElementById('lastNameError');
+        if (lastName.value.trim() === '') {
+          lastNameError.textContent = 'Last name is required.';
+          isValid = false;
+        } else {
+          lastNameError.textContent = '';
+        }
+    
+        // Validate Date of Birth
+        const dob = document.getElementById('dob');
+        const dobError = document.getElementById('dobError');
+        if (dob.value === '') {
+          dobError.textContent = 'Date of birth is required.';
+          isValid = false;
+        } else {
+          dobError.textContent = '';
+        }
+    
+        // Validate Gender
+        const gender = document.getElementById('gender');
+        const genderError = document.getElementById('genderError');
+        if (gender.value === '') {
+          genderError.textContent = 'Gender selection is required.';
+          isValid = false;
+        } else {
+          genderError.textContent = '';
+        }
+    
+        // Validate Phone Number
+        const phoneNumber = document.getElementById('phoneNumber');
+        const phoneNumberError = document.getElementById('phoneNumberError');
+        const phonePattern = /^[0-9]{10}$/;
+        if (!phonePattern.test(phoneNumber.value)) {
+          phoneNumberError.textContent = 'Please enter a valid 10-digit phone number.';
+          isValid = false;
+        } else {
+          phoneNumberError.textContent = '';
+        }
+    
+        // Validate Email
+        const email = document.getElementById('email');
+        const emailError = document.getElementById('emailError');
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email.value)) {
+          emailError.textContent = 'Please enter a valid email address.';
+          isValid = false;
+        } else {
+          emailError.textContent = '';
+        }
+    
+        // Validate Password
+        const password = document.getElementById('password');
+        const passwordError = document.getElementById('passwordError');
+        if (password.value.length < 8) {
+          passwordError.textContent = 'Password must be at least 8 characters long.';
+          isValid = false;
+        } else {
+          passwordError.textContent = '';
+        }
+    
+        // Validate Confirm Password
+        const confirmPassword = document.getElementById('confirmPassword');
+        const confirmPasswordError = document.getElementById('confirmPasswordError');
+        if (confirmPassword.value !== password.value) {
+          confirmPasswordError.textContent = 'Passwords do not match.';
+          isValid = false;
+        } else {
+          confirmPasswordError.textContent = '';
+        }
+    
+        if (!isValid) {
+          event.preventDefault(); // Prevent form submission if validation fails
+        }
+      });
+    
+      // Real-time Validation
+      form.addEventListener('input', function(event) {
+        const target = event.target;
+        const errorElement = document.getElementById(target.id + 'Error');
+        
+        if (target.id === 'firstName' || target.id === 'lastName') {
+          if (target.value.trim() !== '') {
+            errorElement.textContent = '';
+          }
+        } else if (target.id === 'dob') {
+          if (target.value !== '') {
+            errorElement.textContent = '';
+          }
+        } else if (target.id === 'gender') {
+          if (target.value !== '') {
+            errorElement.textContent = '';
+          }
+        } else if (target.id === 'phoneNumber') {
+          const phonePattern = /^[0-9]{10}$/;
+          if (phonePattern.test(target.value)) {
+            errorElement.textContent = '';
+          }
+        } else if (target.id === 'email') {
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (emailPattern.test(target.value)) {
+            errorElement.textContent = '';
+          }
+        } else if (target.id === 'password') {
+          if (target.value.length >= 8) {
+            errorElement.textContent = '';
+          }
+        } else if (target.id === 'confirmPassword') {
+          const password = document.getElementById('password').value;
+          if (target.value === password) {
+            errorElement.textContent = '';
+          }
+        }
+      });
+    </script>
+  </body>
 </html>
