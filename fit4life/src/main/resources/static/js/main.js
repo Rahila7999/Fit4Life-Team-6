@@ -35,12 +35,12 @@
     // cads code
 // Array of fitness image URLs
         const fitnessImages = [
-            'https://res.cloudinary.com/dbzlzmrhc/image/upload/v1718185446/banner5_edrdiq.png',
-            'https://res.cloudinary.com/dbzlzmrhc/image/upload/v1718185445/banner7_wsuyfq.jpg',
-            'https://res.cloudinary.com/dbzlzmrhc/image/upload/v1718185445/banner6_zlion4.jpg',
-            'https://res.cloudinary.com/dbzlzmrhc/image/upload/v1718185444/banner4_xk5z78.jpg',
-            'https://res.cloudinary.com/dbzlzmrhc/image/upload/v1718185444/banner3_snc23r.jpg',
-            'https://res.cloudinary.com/dbzlzmrhc/image/upload/v1718185443/banner2_htit0c.jpg',
+            'https://res.cloudinary.com/deup6t83x/image/upload/v1721236217/banner_opykal.jpg',
+            'https://res.cloudinary.com/deup6t83x/image/upload/v1721236217/banner2_dubj0v.jpg',
+            'https://res.cloudinary.com/deup6t83x/image/upload/v1721236222/banner3_yhpyz3.jpg',
+            'https://res.cloudinary.com/deup6t83x/image/upload/v1721236224/banner6_mw0iwb.jpg',
+            'https://res.cloudinary.com/deup6t83x/image/upload/v1721236227/banner7_zrw7zw.jpg',
+            'https://res.cloudinary.com/deup6t83x/image/upload/v1721236236/banner4_pjm22p.jpg',
             'https://res.cloudinary.com/dbzlzmrhc/image/upload/v1718185443/banner_nu1k2r.jpg',
         ];
 
